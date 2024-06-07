@@ -2,6 +2,9 @@ import { Header } from "../components/header/Header";
 
 export function MainPage() {
     return (
-        <Header />
+        <Header
+            headerRecommendMovie="추천 영화"
+            headerMovieInsert="등록"
+            headerLogin="로그인" />
     )
 }
