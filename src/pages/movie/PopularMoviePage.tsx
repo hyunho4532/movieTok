@@ -1,4 +1,12 @@
-export function RecommendMoviePage() {
+import { useEffect } from "react"
+import { popularMovie } from "../../entities/movie/api";
+
+export function PopularMoviePage() {
+
+    useEffect(() => {
+        console.log(popularMovie);
+    });
+
     return (
         <section className="w-[880px] h-[60px] mt-[120px]">
             <article>

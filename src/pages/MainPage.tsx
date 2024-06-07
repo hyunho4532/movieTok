@@ -1,5 +1,5 @@
 import { Header } from "../components/header/Header";
-import { RecommendMoviePage } from "./movie/RecommendMoviePage";
+import { PopularMoviePage } from "./movie/PopularMoviePage";
 
 export function MainPage() {
     return (
@@ -9,7 +9,7 @@ export function MainPage() {
                 headerMovieInsert="등록"
                 headerLogin="로그인" />
 
-            <RecommendMoviePage />
+            <PopularMoviePage />
         </>
     )
 }
