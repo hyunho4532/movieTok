@@ -1,7 +1,14 @@
 import { Header } from "../components/header/Header";
+import { getPopularMovies } from "../entities/movie/api";
 import { PopularMoviePage } from "./movie/PopularMoviePage";
 
 export function MainPage() {
+
+    const popularMovieData = getPopularMovies()
+        .then(data => {
+            return data
+        })
+
     return (
         <>
             <Header
@@ -9,7 +16,8 @@ export function MainPage() {
                 headerMovieInsert="등록"
                 headerLogin="로그인" />
 
-            <PopularMoviePage />
+            <PopularMoviePage
+                popularMovie={popularMovieData} />
         </>
     )
 }
