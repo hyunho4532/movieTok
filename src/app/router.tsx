@@ -13,7 +13,7 @@ export const router = createBrowserRouter ([
         element: <MainPage />
     },
     {
-        path: "/popular/movie/detail",
+        path: "/popular/movie/detail/:id",
         element: <PopularMovieDetailPage />
     }
   ])

@@ -8,7 +8,7 @@ export function PopularMovieItems(props: PopularMovieItemsProps) {
             <div className="flex w-[4800px] h-[300] mt-[16px]">
                 {props.popularMovie.map((movie: any, index: any) => (
                     <PopularMovieCard key={index}>
-                        <Link to="">
+                        <Link to={`http://localhost:5173/popular/movie/detail/${movie.id}`}>
                             { movie.title.length > 13 ?
                                 <p className="text-start px-2 pt-2">{movie.title.substring(0, 13)}</p> :
                                 <p className="text-start px-2 pt-2">{movie.title}</p> }
