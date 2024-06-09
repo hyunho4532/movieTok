@@ -1,9 +1,13 @@
 import axios from "axios";
-import { TMDB_BASE_URL } from "../../constants/const/const";
+import { TMDB_API_KEY, TMDB_BASE_URL } from "../../constants/const/const";
 
 export const TMDBAxiosInstance = axios.create ({
     baseURL: TMDB_BASE_URL,
     timeout: 1000,
+    headers: {
+        Accept: 'application/json',
+        Authorization: `Bearer ${TMDB_API_KEY}`
+    }
 })
 
 TMDBAxiosInstance.interceptors.request.use(function (config) {
@@ -13,7 +17,7 @@ TMDBAxiosInstance.interceptors.request.use(function (config) {
 });
 
 TMDBAxiosInstance.interceptors.response.use(function (response) {
-    return response.data;
+    return response;
 }, function (error) {
     return Promise.reject(error);
 });
