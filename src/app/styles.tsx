@@ -17,9 +17,20 @@ export const PopularMovieItem = styled.div`
     margin-left: 340px;
 `
 
+export const PopularActorItem = styled.div`
+    overflow-x scroll;
+`
+
 export const PopularMovieItemFix = styled.div`
     width: 4800px;
     height: 370px;    
+    display: flex;
+    margin-top: 16px;
+`
+
+export const PopularActorItemFix = styled.div`
+    width: 300px;
+    height: 370px;
     display: flex;
     margin-top: 16px;
 `

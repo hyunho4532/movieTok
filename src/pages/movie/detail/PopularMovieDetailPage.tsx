@@ -1,34 +1,45 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { getPopularMovieDetail } from "../../../entities/movie/api";
+import { getPopularMovieDetail, getPopularMovieDetailActors } from "../../../entities/movie/api";
 import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailHomePage, PopularMovieDetailTitle, PopularMovieDetailActors } from "../../../app/styles";
+import { PopularActorItems } from "../../../components/items/PopularActorItems";
 
 export function PopularMovieDetailPage() {
     
-    const [popularMovieByIdData, setPopularMovieByIdData] = useState<any>([]);
+    const [popularMoviesByIdData, setPopularMoviesByIdData] = useState<any>([]);
+    const [popularActorsByIdData, setPopularActorsByIdData] = useState([]);
 
     const { id } = useParams<{id: string}>();
 
     useEffect(() => {
         getPopularMovieDetail(id!)
             .then(data => {
-                setPopularMovieByIdData(data);
+                setPopularMoviesByIdData(data);
             })
             .catch(error => {
                 console.error(error)
+            })
+
+        getPopularMovieDetailActors(id!)
+            .then(data => {
+                setPopularActorsByIdData(data);
+            })
+            .catch(error => {
+                console.error(error);
             })
 
     }, [id]);
 
     return (
         <>
-            { popularMovieByIdData != '' ?
+            { popularMoviesByIdData != '' ?
                 <PopularMovieDetail>
-                    <PopularMovieDetailTitle>영화 이름: {popularMovieByIdData.title}</PopularMovieDetailTitle>
-                    <PopularMovieDetailHomePage href="">{popularMovieByIdData.homepage}</PopularMovieDetailHomePage>
-                    <PopularMovieDetailImage src={`https://image.tmdb.org/t/p/original/${popularMovieByIdData.poster_path}`}></PopularMovieDetailImage>
+                    <PopularMovieDetailTitle>영화 이름: {popularMoviesByIdData.title}</PopularMovieDetailTitle>
+                    <PopularMovieDetailHomePage href="">{popularMoviesByIdData.homepage}</PopularMovieDetailHomePage>
+                    <PopularMovieDetailImage src={`https://image.tmdb.org/t/p/original/${popularMoviesByIdData.poster_path}`}></PopularMovieDetailImage>
 
                     <PopularMovieDetailActors>이 영화에 등장한 인물들</PopularMovieDetailActors>
+                    <PopularActorItems popularActor={popularActorsByIdData} />
                 </PopularMovieDetail> : 
 
                 <MovieLoading>영화 데이터를 잠깐 불러오고 있습니다!</MovieLoading>

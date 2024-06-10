@@ -35,13 +35,13 @@ export const getPopularMovieDetail = async (movieId: string): Promise<any> => {
 
 export const getPopularMovieDetailActors = async (movieId: string): Promise<any> => {
     try {
-        const response = await TMDBAxiosInstance.get(`/${movieId}?language=ko-KR`)
+        const response = await TMDBAxiosInstance.get(`/${movieId}/credits?language=ko-KR`)
 
         if (!response) {
             throw new Error('Network response was not ok');
         }
 
-        return response.data;
+        return response.data.cast;
     } catch (err) {
         console.error('Fetch error:', err);
         return [];
