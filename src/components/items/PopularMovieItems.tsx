@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 import { PopularMovieCard } from "../card/PopularMovieCard";
 import { PopularMovieItemsProps } from "./props/PopularMovieItemsProps";
+import { PopularMovieItem, PopularMovieItemFix } from "../../app/styles";
 
 export function PopularMovieItems(props: PopularMovieItemsProps) {
     return (
-        <div className="overflow-x-scroll ml-[340px]">
-            <div className="flex w-[4800px] h-[300] mt-[16px]">
+        <PopularMovieItem>
+            <PopularMovieItemFix>
                 {props.popularMovie.map((movie: any, index: any) => (
                     <PopularMovieCard key={index}>
                         <Link to={`http://localhost:5173/popular/movie/detail/${movie.id}`}>
@@ -18,7 +19,7 @@ export function PopularMovieItems(props: PopularMovieItemsProps) {
                         </Link>
                     </PopularMovieCard>
                 ))}
-            </div>
-        </div>
+            </PopularMovieItemFix>
+        </PopularMovieItem>
     );
 }

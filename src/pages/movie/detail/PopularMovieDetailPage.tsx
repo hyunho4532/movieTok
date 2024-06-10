@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { getPopularMovieDetail } from "../../../entities/movie/api";
+import { MovieLoading, PopularMovieDetail, PopularMovieDetailName } from "../../../app/styles";
 
 export function PopularMovieDetailPage() {
     
@@ -22,12 +23,12 @@ export function PopularMovieDetailPage() {
     return (
         <>
             { popularMovieByIdData != '' ?
-                <div style={{ display: 'flex', justifyContent: 'center', alignContent: 'center' }}>
-                    <p className="text-lg font-bold">영화 이름: {popularMovieByIdData.title}</p>
-                </div> :
+                <PopularMovieDetail>
+                    <PopularMovieDetailName>영화 이름: {popularMovieByIdData.title}</PopularMovieDetailName>
+                </PopularMovieDetail> :
 
-                <p style={{ transform: 'translate(-50%, -50%)' }}>영화 데이터를 잠깐 불러오고 있습니다!</p> }
-            
+                <MovieLoading>영화 데이터를 잠깐 불러오고 있습니다!</MovieLoading>
+            }
         </>
     )
 }
