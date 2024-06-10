@@ -25,9 +25,8 @@ export const PopularMovieItemFix = styled.div`
 `
 
 export const PopularMovieDetail = styled.div`
-    display: flex;
-    justify-content: center;
-    align-content: center;
+    width: 370px;
+    margin: 0 auto;
 `
 
 export const PopularMovieSection = styled.section`
@@ -40,12 +39,35 @@ export const PopularMovieArticle = styled.article`
 
 `
 
-export const PopularMovieDetailName = styled.p`
+export const PopularMovieDetailTitle = styled.p`
     font-size: 1.125rem;
     line-height: 1.75rem;
     font-weight: bold;
+    text-align: left;
 `
 
-export const MovieLoading = styled.p`
-    transform: 'translate(-50%, -50%)'
+export const PopularMovieDetailHomePage = styled.a`
+    cursor: pointer;
+    margin-top: 24px;
+`
+
+export const PopularMovieDetailImage = styled.img`
+    width: 360px;
+    height: 360px;
+    margin: 0 auto;
+    margin-top: 24px;
+`
+
+export const PopularMovieDetailActors = styled.p`
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin-top: 80px;
+    text-align: left;
+`
+
+export const MovieLoading = styled.div`
+    justify-content: center;
+    align-content: center;
+    display: flex;
 `
