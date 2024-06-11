@@ -1,5 +1,6 @@
 import { Header } from "../components/header/Header";
 import { getPopularMovies } from "../entities/movie/api";
+import { PopularActorPage } from "./actor/PopularActorPage";
 import { PopularMoviePage } from "./movie/PopularMoviePage";
 
 export function MainPage() {
@@ -18,6 +19,8 @@ export function MainPage() {
 
             <PopularMoviePage
                 popularMovie={popularMovieData} />
+
+            <PopularActorPage />
         </>
     )
 }
