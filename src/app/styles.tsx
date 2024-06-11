@@ -46,6 +46,23 @@ export const PopularMovieSection = styled.section`
     margin-top: 120px;
 `
 
+export const PopularMovieDetailTitleSection = styled.section`
+    width: 380px;
+    height: 60px;
+`
+
+export const PopularMovieDetailContentSection = styled.section`
+    width: 380px;
+    height: 60px;
+    margin-top: 80px;
+`
+
+export const PopularMovieDetailActorSection = styled.section`
+    width: 380px;
+    height: 60px;
+    margin-top: 300px;
+`
+
 export const PopularMovieArticle = styled.article`
 
 `
