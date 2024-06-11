@@ -1,4 +1,4 @@
-import { PopularMovieProps } from "../../components/items/props/PopularMovieProps";
+import { PopularMovieProps } from "./props/PopularMovieProps";
 import { PopularMovieItems } from "../../components/items/PopularMovieItems";
 import { useEffect, useState } from "react";
 import { PopularMovieArticle, PopularMovieSection } from "../../app/styles";
