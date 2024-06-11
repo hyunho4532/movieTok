@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import { PopularActorItem, PopularActorItemFix } from "../../app/styles";
+import { Card } from "@mui/material";
+import { PopularActorDetailImage, PopularActorItem, PopularActorItemFix } from "../../app/styles";
 import { PopularActorItemsProps } from "./props/PopularActorItemsProps";
 
 export function PopularActorItems(props: PopularActorItemsProps) {
@@ -8,9 +9,10 @@ export function PopularActorItems(props: PopularActorItemsProps) {
         <PopularActorItem>
             <PopularActorItemFix>
                 {props.popularActor.map((actor, index) => (
-                    <div key={index}>
+                    <Card className="rounded-3xl mr-2" key={index}>
+                        <PopularActorDetailImage src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`}></PopularActorDetailImage>
                         <p>{actor.name}</p>
-                    </div>
+                    </Card>
                 ))}
             </PopularActorItemFix>
         </PopularActorItem>

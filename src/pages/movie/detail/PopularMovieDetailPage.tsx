@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { getPopularMovieDetail, getPopularMovieDetailActors } from "../../../entities/movie/api";
-import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailHomePage, PopularMovieDetailTitle, PopularMovieDetailActors } from "../../../app/styles";
+import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailHomePage, PopularMovieDetailTitle, PopularMovieDetailActors, PopularMovieDetailVoteAvg, PopularMovieDetailSubTitle } from "../../../app/styles";
 import { PopularActorItems } from "../../../components/items/PopularActorItems";
 
 export function PopularMovieDetailPage() {
@@ -28,13 +28,17 @@ export function PopularMovieDetailPage() {
                 console.error(error);
             })
 
+        console.log(popularMoviesByIdData);
+
     }, [id]);
 
     return (
         <>
             { popularMoviesByIdData != '' ?
                 <PopularMovieDetail>
-                    <PopularMovieDetailTitle>영화 이름: {popularMoviesByIdData.title}</PopularMovieDetailTitle>
+                    <PopularMovieDetailTitle>{popularMoviesByIdData.title}</PopularMovieDetailTitle>
+                    <PopularMovieDetailSubTitle>{popularMoviesByIdData.overview}</PopularMovieDetailSubTitle>
+                    <PopularMovieDetailVoteAvg>❤ {popularMoviesByIdData.vote_average}</PopularMovieDetailVoteAvg>
                     <PopularMovieDetailHomePage href="">{popularMoviesByIdData.homepage}</PopularMovieDetailHomePage>
                     <PopularMovieDetailImage src={`https://image.tmdb.org/t/p/original/${popularMoviesByIdData.poster_path}`}></PopularMovieDetailImage>
 
