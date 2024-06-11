@@ -1,15 +1,17 @@
+import { HeaderFix, HeaderSize } from "../../app/styles";
 import { HeaderIcon } from "./HeaderIcon";
 import { HeaderItem } from "./HeaderItem";
+import { HedaerProps } from "./props/HeaderProps";
 
-export function Header() {
+export function Header(props: HedaerProps) {
     return (
-        <div className="w-[1200px] h-[60px]">
-            <ul className="flex text-end items-center justify-center">
+        <HeaderSize>
+            <HeaderFix>
                 <HeaderIcon src="../../public/movietok_logo.jpg" width='120' height='120' />
-                <HeaderItem>추천 영화</HeaderItem>
-                <HeaderItem>등록</HeaderItem>
-                <HeaderItem>로그인</HeaderItem>
-            </ul>
-        </div>
+                <HeaderItem>{props.headerRecommendMovie}</HeaderItem>
+                <HeaderItem>{props.headerMovieInsert}</HeaderItem>
+                <HeaderItem>{props.headerLogin}</HeaderItem>
+            </HeaderFix>
+        </HeaderSize>
     )
 }
