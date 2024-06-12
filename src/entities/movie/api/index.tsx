@@ -58,6 +58,25 @@ export const getPopularMovieDetail = async (movieId: string): Promise<any> => {
     }
 }
 
+export const getPopularMovieDetailVideos = async (movieId: string): Promise<any> => {
+
+    const axiosInstance = TMDBAxiosInstance('movie');
+
+    try {
+        const response = await axiosInstance.get(`/${movieId}/videos?language=ko-KR`);
+
+        if (!response) {
+            throw new Error('Network response was not ok');
+        }
+
+        return response.data.results;
+    
+    } catch (err) {
+        console.error('Fetch error:', err);
+        return [];
+    }
+}
+
 export const getPopularMovieDetailActors = async (movieId: string): Promise<any> => {
 
     const axiosInstance = TMDBAxiosInstance('movie');

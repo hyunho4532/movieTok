@@ -12,6 +12,11 @@ export const HeaderFix = styled.ul`
     justify-content: center; 
 `
 
+export const PopularMovieItem = styled.div`
+    overflow-x: scroll;
+    margin-left: 340px;
+`
+
 export const PopularActorItem = styled.div`
     overflow-x: scroll;
     margin-left: 340px;
@@ -70,10 +75,16 @@ export const PopularMovieDetailContentSection = styled.section`
     margin-top: 80px;
 `
 
-export const PopularMovieDetailActorSection = styled.section`
+export const PopularMovieDetailVideoSection = styled.section`
     width: 380px;
     height: 60px;
     margin-top: 300px;
+`
+
+export const PopularMovieDetailActorSection = styled.section`
+    width: 380px;
+    height: 60px;
+    margin-top: 120px;
 `
 
 export const PopularMovieArticle = styled.article`
@@ -118,6 +129,14 @@ export const PopularMovieDetailImage = styled.img`
     height: 240px;
     margin-top: 24px;
     border-radius: 10%;
+`
+
+export const PopularMovieDetailVideos = styled.p`
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: bold;
+    margin-top: 80px;
+    text-align: left;
 `
 
 export const PopularMovieDetailActors = styled.p`
