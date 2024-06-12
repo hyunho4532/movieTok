@@ -1,13 +1,15 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { getPopularMovieDetail, getPopularMovieDetailActors } from "../../../entities/movie/api";
+import { getPopularMovieDetail, getPopularMovieDetailActors, getPopularMovieDetailVideos } from "../../../entities/movie/api";
 import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailTitleSection, PopularMovieDetailTitle, PopularMovieDetailActors, PopularMovieDetailVoteAvg, PopularMovieDetailSubTitle, PopularMovieDetailContentSection, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
 import { PopularActorDetailItems } from "../../../components/items/PopularActorDetailItems";
+import { PopularVideoDetailItems } from "../../../components/items/PopularVideoDetailItems";
 
 export function PopularMovieDetailPage() {
     
     const [popularMoviesByIdData, setPopularMoviesByIdData] = useState<any>([]);
     const [popularActorsByIdData, setPopularActorsByIdData] = useState([]);
+    const [popularVideosByIdData, setPopularVideosByIdData] = useState([]);
 
     const { id } = useParams<{id: string}>();
 
@@ -28,8 +30,13 @@ export function PopularMovieDetailPage() {
                 console.error(error);
             })
 
-        console.log(popularMoviesByIdData);
-
+        getPopularMovieDetailVideos(id!)
+            .then(data => {
+                setPopularVideosByIdData(data);
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }, [id]);
 
     return (
@@ -48,7 +55,7 @@ export function PopularMovieDetailPage() {
 
                     <PopularMovieDetailVideoSection>
                         <PopularMovieDetailVideos>해당 영화와 관련된 영상들을 찾아왔어요!!</PopularMovieDetailVideos>
-                        
+                        <PopularVideoDetailItems popularVideo={popularVideosByIdData} />
                     </PopularMovieDetailVideoSection>
 
                     <PopularMovieDetailActorSection>

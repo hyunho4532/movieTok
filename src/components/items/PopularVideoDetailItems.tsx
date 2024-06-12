@@ -1,17 +1,19 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import { Card } from "@mui/material";
-import { PopularActorDetailImage, PopularActorDetailItem, PopularActorDetailItemFix } from "../../app/styles";
-import { PopularActorItemsProps } from "./props/PopularActorItemsProps";
+import { PopularActorDetailItem, PopularActorDetailItemFix } from "../../app/styles";
+import { PopularVideoItemsProps } from "./props/PopularVideoItemsProps";
 
-export function PopularVideoDetailItems(props: PopularActorItemsProps) {
+export function PopularVideoDetailItems(props: PopularVideoItemsProps) {
+
+    console.log(props.popularVideo);
+
     return (
         <PopularActorDetailItem>
             <PopularActorDetailItemFix>
-                {props.popularActor.map((actor, index) => (
+                {props.popularVideo.map((video, index) => (
                     <Card className="rounded-3xl mr-2" key={index}>
-                        <PopularActorDetailImage src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`}></PopularActorDetailImage>
-                        <p>{actor.name}</p>
+                        <p>{video.name}</p>
                     </Card>
                 ))}
             </PopularActorDetailItemFix>

@@ -84,7 +84,7 @@ export const PopularMovieDetailVideoSection = styled.section`
 export const PopularMovieDetailActorSection = styled.section`
     width: 380px;
     height: 60px;
-    margin-top: 120px;
+    margin-top: 240px;
 `
 
 export const PopularMovieArticle = styled.article`
