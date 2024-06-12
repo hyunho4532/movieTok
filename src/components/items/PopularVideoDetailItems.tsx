@@ -1,22 +1,26 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
 import { Card } from "@mui/material";
-import { PopularActorDetailItem, PopularActorDetailItemFix } from "../../app/styles";
+import { PopularVideoDetailItem, PopularVideoDetailItemFix, YoutubeComponent } from "../../app/styles";
 import { PopularVideoItemsProps } from "./props/PopularVideoItemsProps";
+import YouTube from "react-youtube";
 
 export function PopularVideoDetailItems(props: PopularVideoItemsProps) {
 
     console.log(props.popularVideo);
 
     return (
-        <PopularActorDetailItem>
-            <PopularActorDetailItemFix>
+        <PopularVideoDetailItem>
+            <PopularVideoDetailItemFix>
                 {props.popularVideo.map((video, index) => (
                     <Card className="rounded-3xl mr-2" key={index}>
-                        <p>{video.name}</p>
+                        <YouTube 
+                            videoId={video.key} 
+                            opts={YoutubeComponent}
+                        />
                     </Card>
                 ))}
-            </PopularActorDetailItemFix>
-        </PopularActorDetailItem>
+            </PopularVideoDetailItemFix>
+        </PopularVideoDetailItem>
     );
   }

@@ -26,6 +26,10 @@ export const PopularActorDetailItem = styled.div`
     overflow-x: scroll;
 `
 
+export const PopularVideoDetailItem = styled.div`
+    overflow-x: scroll;
+`
+
 export const PopularMovieItemFix = styled.div`
     width: 4800px;
     height: 370px;    
@@ -36,6 +40,13 @@ export const PopularMovieItemFix = styled.div`
 export const PopularActorItemFix = styled.div`
     width: 2600px;
     height: 160px;
+    display: flex;
+    margin-top: 16px;
+`
+
+export const PopularVideoDetailItemFix = styled.div`
+    width: 3200px;
+    height: 320px;
     display: flex;
     margin-top: 16px;
 `
@@ -84,7 +95,7 @@ export const PopularMovieDetailVideoSection = styled.section`
 export const PopularMovieDetailActorSection = styled.section`
     width: 380px;
     height: 60px;
-    margin-top: 240px;
+    margin-top: 380px;
 `
 
 export const PopularMovieArticle = styled.article`
@@ -152,3 +163,11 @@ export const MovieLoading = styled.div`
     align-content: center;
     display: flex;
 `
+
+export const YoutubeComponent = {
+    height: '320',
+    width: '380',
+    playerVars: {
+        autoplay: 0,
+    },
+}
