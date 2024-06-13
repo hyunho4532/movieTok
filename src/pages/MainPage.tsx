@@ -1,27 +1,9 @@
 import { Header } from "../components/header/Header";
-import { getPopularActors, getPopularMovies } from "../entities/movie/api";
+import { popularActorData, popularMovieData } from "../entities/movie/getter";
 import { PopularActorPage } from "./actor/PopularActorPage";
 import { PopularMoviePage } from "./movie/PopularMoviePage";
 
 export function MainPage() {
-
-    const popularMovieData = getPopularMovies()
-        .then(data => {
-            return data
-        })
-        .catch(error => {
-            return error;
-        })
-
-    const popularActorData = getPopularActors()
-        .then(data => {
-            console.log(data);
-            return data
-        })
-        .catch(error => {
-            return error;
-        })
-
     return (
         <>
             <Header
