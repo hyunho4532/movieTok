@@ -1,10 +1,11 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { getPopularMovieDetail, getPopularMovieDetailActors, getPopularMovieDetailVideos } from "../../../entities/movie/api";
-import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailActors, PopularMovieDetailVoteAvg, PopularMovieDetailContentSection, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
+import { MovieLoading, PopularMovieDetail, PopularMovieDetailActors, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
 import { PopularActorDetailItems } from "../../../components/items/PopularActorDetailItems";
 import { PopularVideoDetailItems } from "../../../components/items/PopularVideoDetailItems";
 import { PopularMovieDetailTitleSections } from "../../../components/sections/PopularMovieDetailTitleSections";
+import { PopularMovieDetailContentSections } from "../../../components/sections/PopularMovieDetailContentSections";
 
 export function PopularMovieDetailPage() {
     
@@ -49,10 +50,10 @@ export function PopularMovieDetailPage() {
                         overview={popularMoviesByIdData.overview}>
                     </PopularMovieDetailTitleSections>
 
-                    <PopularMovieDetailContentSection>
-                        <PopularMovieDetailVoteAvg>❤ {popularMoviesByIdData.vote_average}</PopularMovieDetailVoteAvg>
-                        <PopularMovieDetailImage src={`https://image.tmdb.org/t/p/original/${popularMoviesByIdData.poster_path}`}></PopularMovieDetailImage>
-                    </PopularMovieDetailContentSection>
+                    <PopularMovieDetailContentSections
+                        vote_average={popularMoviesByIdData.vote_average}
+                        poster_path={popularMoviesByIdData.poster_path}>
+                    </PopularMovieDetailContentSections>
 
                     <PopularMovieDetailVideoSection>
                         <PopularMovieDetailVideos>해당 영화와 관련된 영상들을 찾아왔어요!!</PopularMovieDetailVideos>
