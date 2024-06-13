@@ -1,9 +1,10 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { getPopularMovieDetail, getPopularMovieDetailActors, getPopularMovieDetailVideos } from "../../../entities/movie/api";
-import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailTitleSection, PopularMovieDetailTitle, PopularMovieDetailActors, PopularMovieDetailVoteAvg, PopularMovieDetailSubTitle, PopularMovieDetailContentSection, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
+import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailActors, PopularMovieDetailVoteAvg, PopularMovieDetailContentSection, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
 import { PopularActorDetailItems } from "../../../components/items/PopularActorDetailItems";
 import { PopularVideoDetailItems } from "../../../components/items/PopularVideoDetailItems";
+import { PopularMovieDetailTitleSections } from "../../../components/sections/PopularMovieDetailTitleSections";
 
 export function PopularMovieDetailPage() {
     
@@ -43,10 +44,10 @@ export function PopularMovieDetailPage() {
         <>
             { popularMoviesByIdData != '' ?
                 <PopularMovieDetail>
-                    <PopularMovieDetailTitleSection>
-                        <PopularMovieDetailTitle>{popularMoviesByIdData.title}</PopularMovieDetailTitle>
-                        <PopularMovieDetailSubTitle>{popularMoviesByIdData.overview}</PopularMovieDetailSubTitle>
-                    </PopularMovieDetailTitleSection>
+                    <PopularMovieDetailTitleSections 
+                        title={popularMoviesByIdData.title}
+                        overview={popularMoviesByIdData.overview}>
+                    </PopularMovieDetailTitleSections>
 
                     <PopularMovieDetailContentSection>
                         <PopularMovieDetailVoteAvg>❤ {popularMoviesByIdData.vote_average}</PopularMovieDetailVoteAvg>
