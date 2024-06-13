@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 import { PopularMovieCard } from "../card/PopularMovieCard";
-import { PopularMovieItemsProps } from "./props/PopularMovieItemsProps";
 import { PopularMovieItem, PopularMovieItemFix } from "../../app/styles";
+import { PopularItemsProps } from "./props/PopularItemsProps";
 
-export function PopularMovieItems(props: PopularMovieItemsProps) {
+export function PopularMovieItems(props: PopularItemsProps) {
     return (
         <PopularMovieItem>
             <PopularMovieItemFix>
-                {props.popularMovie.map((movie: any, index: any) => (
+                {props.popularData.map((movie: any, index: any) => (
                     <PopularMovieCard key={index}>
                         <Link to={`http://localhost:5173/popular/movie/detail/${movie.id}`}>
                             { movie.title.length > 13 ?

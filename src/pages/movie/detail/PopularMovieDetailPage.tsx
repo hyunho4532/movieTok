@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
 import { getPopularMovieDetail, getPopularMovieDetailActors, getPopularMovieDetailVideos } from "../../../entities/movie/api";
 import { MovieLoading, PopularMovieDetail, PopularMovieDetailActors, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
-import { PopularActorDetailItems } from "../../../components/items/PopularActorDetailItems";
+import { PopularActorDetailItems } from "../../../components/items/detail/PopularActorDetailItems";
 import { PopularVideoDetailItems } from "../../../components/items/PopularVideoDetailItems";
 import { PopularMovieDetailTitleSections } from "../../../components/sections/PopularMovieDetailTitleSections";
 import { PopularMovieDetailContentSections } from "../../../components/sections/PopularMovieDetailContentSections";
@@ -62,7 +62,7 @@ export function PopularMovieDetailPage() {
 
                     <PopularMovieDetailActorSection>
                         <PopularMovieDetailActors>이 영화에 등장한 인물들</PopularMovieDetailActors>
-                        <PopularActorDetailItems popularActor={popularActorsByIdData} />
+                        <PopularActorDetailItems popularData={popularActorsByIdData} />
                     </PopularMovieDetailActorSection>
 
                 </PopularMovieDetail> : 

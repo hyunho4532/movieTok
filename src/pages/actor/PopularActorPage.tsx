@@ -19,7 +19,7 @@ export function PopularActorPage(props: PopularActorProps) {
         <PopularActorSection>
             <PopularActorArticle>
                 <h1 className="text-center text-xl font-bold">요즘 흥행 중인 배우들</h1>
-                <PopularActorItems popularActor={popularActors}  />
+                <PopularActorItems popularData={popularActors}  />
             </PopularActorArticle>
         </PopularActorSection>
     )
