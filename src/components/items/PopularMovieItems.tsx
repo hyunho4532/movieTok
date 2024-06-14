@@ -15,7 +15,7 @@ export function PopularMovieItems(props: PopularItemsProps) {
                                 <p className="text-start px-2 pt-2">{movie.title}</p> }
                                 <p className="invisible">{movie.id}</p>
                                 
-                                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} loading="lazy" />
+                                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} width="300" height="400" />
                         </Link>
                     </PopularMovieCard>
                 ))}

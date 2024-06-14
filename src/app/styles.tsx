@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+export const PopularMovieCardContianer = styled.div`
+    perspective: 1000px;
+`
+
 export const HeaderSize = styled.div`
     width: 1300px;
     height: 60px;
@@ -32,7 +36,7 @@ export const PopularVideoDetailItem = styled.div`
 
 export const PopularMovieItemFix = styled.div`
     width: 4800px;
-    height: 340px;    
+    height: 380px;    
     display: flex;
     margin-top: 16px;
 `
@@ -156,6 +160,27 @@ export const PopularMovieDetailActors = styled.p`
     font-weight: bold;
     margin-top: 80px;
     text-align: left;
+`
+
+export const PopularMoviesCard = styled.div`
+    border-radius: 1.5rem;
+    margin-right: 20px;
+    transition: transform 0.3s;
+    
+    &:hover {
+        transform: scale(1.04);
+    }
+`
+
+export const PopularActorsCard = styled.div`
+    border-radius: 1.5rem;
+    margin-right: 20px;
+    transition: transform 0.7s;
+    transform: rotateY(0deg);
+    
+    &:hover {
+        transform: rotateY(180deg);
+    }
 `
 
 export const MovieLoading = styled.div`
