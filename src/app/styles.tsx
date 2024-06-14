@@ -32,7 +32,7 @@ export const PopularVideoDetailItem = styled.div`
 
 export const PopularMovieItemFix = styled.div`
     width: 4800px;
-    height: 370px;    
+    height: 340px;    
     display: flex;
     margin-top: 16px;
 `

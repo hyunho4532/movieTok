@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { getPopularMovieDetail, getPopularMovieDetailActors, getPopularMovieDetailVideos } from "../../../entities/movie/api";
 import { MovieLoading, PopularMovieDetail, PopularMovieDetailActors, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
 import { PopularActorDetailItems } from "../../../components/items/detail/PopularActorDetailItems";
-import { PopularVideoDetailItems } from "../../../components/items/PopularVideoDetailItems";
+import { PopularVideoDetailItems } from "../../../components/items/detail/PopularVideoDetailItems";
 import { PopularMovieDetailTitleSections } from "../../../components/sections/PopularMovieDetailTitleSections";
 import { PopularMovieDetailContentSections } from "../../../components/sections/PopularMovieDetailContentSections";
 
@@ -57,7 +57,7 @@ export function PopularMovieDetailPage() {
 
                     <PopularMovieDetailVideoSection>
                         <PopularMovieDetailVideos>해당 영화와 관련된 영상들을 찾아왔어요!!</PopularMovieDetailVideos>
-                        <PopularVideoDetailItems popularVideo={popularVideosByIdData} />
+                        <PopularVideoDetailItems popularData={popularVideosByIdData} />
                     </PopularMovieDetailVideoSection>
 
                     <PopularMovieDetailActorSection>
