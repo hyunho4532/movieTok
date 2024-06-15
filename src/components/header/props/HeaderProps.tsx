@@ -1,5 +1,5 @@
-export interface HedaerProps {
+export interface HeaderProps {
     headerRecommendMovie: string,
     headerMovieInsert: string,
-    headerLogin: string
+    headerLogin: string,
 }

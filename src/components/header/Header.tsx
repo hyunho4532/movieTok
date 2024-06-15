@@ -1,9 +1,9 @@
 import { HeaderFix, HeaderSize } from "../../app/styles";
 import { HeaderIcon } from "./HeaderIcon";
 import { HeaderItem } from "./HeaderItem";
-import { HedaerProps } from "./props/HeaderProps";
+import { HeaderProps } from "./props/HeaderProps";
 
-export function Header(props: HedaerProps) {
+export function Header(props: HeaderProps) {
     return (
         <HeaderSize>
             <HeaderFix>

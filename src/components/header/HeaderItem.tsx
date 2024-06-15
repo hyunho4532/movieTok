@@ -1,5 +1,10 @@
-export function HeaderItem({ children }) {
+import { HeaderItemTitle } from "../../app/styles";
+import { headerItemClick } from "./hooks/headerItemClick";
+import { HeaderItemProps } from "./props/HeaderItemProps";
+
+export function HeaderItem({children}: HeaderItemProps) {
+
     return (
-        <li className="mr-24">{children}</li>
+        <HeaderItemTitle className="mr-24" onClick={() => headerItemClick(children)}>{children}</HeaderItemTitle>
     )
 }

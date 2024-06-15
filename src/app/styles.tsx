@@ -13,7 +13,18 @@ export const HeaderFix = styled.ul`
     display: flex;
     text-align: end;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+`
+
+export const HeaderItemTitle = styled.li`
+    margin-right: 96px;
+    cursor: pointer;
+    transition: transform 0.7s;
+    
+    &:hover {
+        transform: scale(1.5);
+        font-weight: bold;
+    }
 `
 
 export const PopularMovieItem = styled.div`
