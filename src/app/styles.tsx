@@ -16,6 +16,11 @@ export const HeaderFix = styled.ul`
     justify-content: center;
 `
 
+export const DialogFix = styled.div`
+    width: 600px;
+    height: 400px;
+`
+
 export const HeaderItemTitle = styled.li`
     margin-right: 96px;
     cursor: pointer;
