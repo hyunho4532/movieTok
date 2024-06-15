@@ -111,9 +111,14 @@ export const PopularActorArticle = styled.article`
 `
 
 export const PopularActorDetailImage = styled.img`
-    width: 140px;
-    height: 160px;
+    width: 160px;
+    height: 140px;
     border-radius: 24px;
+`
+
+export const PopularActorDetailName = styled.p`
+    padding-top: 12px;
+    font-weight: bold;
 `
 
 export const PopularMovieDetailTitle = styled.p`
@@ -177,7 +182,12 @@ export const PopularActorsCard = styled.div`
     margin-right: 20px;
     transition: transform 0.7s;
     transform: rotateY(0deg);
-    
+    width: 140px;
+    height: 140px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+
     &:hover {
         transform: rotateY(180deg);
     }
