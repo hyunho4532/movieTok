@@ -1,13 +1,11 @@
 import React from "react";
 import { Slide } from "@mui/material";
-import { LoginDialogProps } from "./LoginDialogProps";
+import { TransitionProps } from "@mui/material/transitions";
 
-export const LoginDialogTransition = React.forwardRef(function LoginDialogTransition(props: LoginDialogProps, ref) {
-
-    const { children, ...rest } = props;
+export const LoginDialogTransition = React.forwardRef(function LoginDialogTransition(props: TransitionProps, ref) {
 
     return (
-        <Slide direction="down" ref={ref} {...rest}>
+        <Slide direction="down" ref={ref} {...props}>
             {props.children}
         </Slide>
     );

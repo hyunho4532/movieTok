@@ -17,8 +17,42 @@ export const HeaderFix = styled.ul`
 `
 
 export const DialogFix = styled.div`
-    width: 600px;
-    height: 400px;
+    width: 560px;
+    height: 380px;
+`
+
+export const DialogTitle = styled.p`
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 32px;
+`
+
+export const DialogSubTitle = styled.p`
+    text-align: center;
+    font-size: 14px;
+    margin-top: 16px;
+    line-height: 36px;
+`
+
+export const DialogAuthLogins = styled.div`
+    width: 360px;
+    height: 100px;
+    transform: translate(8%);
+    margin-top: 38px;
+`
+
+export const DialogAuthLogin = styled.div`
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: bold;
+`
+
+export const DialogAuthLoginImage  = styled.img`
+    width: 40px;
 `
 
 export const HeaderItemTitle = styled.li`
