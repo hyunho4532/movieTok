@@ -1,18 +1,27 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 
-import { Card } from "@mui/material";
-import { PopularActorDetailImage, PopularActorItem, PopularActorItemFix } from "../../app/styles";
-import { PopularActorItemsProps } from "./props/PopularActorItemsProps";
+import { PopularActorDetailImage, PopularActorDetailName, PopularActorItem, PopularActorItemFix, PopularActorsCard, PopularMovieCardContianer } from "../../app/styles";
+import { PopularMovieCardBack } from "../../app/styles/back";
+import { PopularMovieCardFront } from "../../app/styles/front";
+import { PopularItemsProps } from "./props/PopularItemsProps";
 
-export function PopularActorItems(props: PopularActorItemsProps) {
+export function PopularActorItems(props: PopularItemsProps) {
+
     return (
         <PopularActorItem>
             <PopularActorItemFix>
-                {props.popularActor.map((actor, index) => (
-                    <Card className="rounded-3xl mr-2" key={index}>
-                        <PopularActorDetailImage src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`}></PopularActorDetailImage>
-                        <p>{actor.name}</p>
-                    </Card>
+                {props.popularData.map((actor, index) => (
+                    <PopularMovieCardContianer>
+                        <PopularActorsCard key={index}>
+                            <PopularMovieCardFront>
+                                <PopularActorDetailImage src={`https://image.tmdb.org/t/p/original/${actor.profile_path}`}></PopularActorDetailImage>
+                            </PopularMovieCardFront>
+
+                            <PopularMovieCardBack>
+                                <PopularActorDetailName>{actor.name}</PopularActorDetailName>
+                            </PopularMovieCardBack>
+                        </PopularActorsCard>
+                    </PopularMovieCardContianer>
                 ))}
             </PopularActorItemFix>
         </PopularActorItem>

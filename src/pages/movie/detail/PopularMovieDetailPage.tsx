@@ -1,13 +1,17 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from "react";
-import { getPopularMovieDetail, getPopularMovieDetailActors } from "../../../entities/movie/api";
-import { MovieLoading, PopularMovieDetail, PopularMovieDetailImage, PopularMovieDetailTitleSection, PopularMovieDetailTitle, PopularMovieDetailActors, PopularMovieDetailVoteAvg, PopularMovieDetailSubTitle, PopularMovieDetailContentSection, PopularMovieDetailActorSection } from "../../../app/styles";
-import { PopularActorItems } from "../../../components/items/PopularActorItems";
+import { getPopularMovieDetail, getPopularMovieDetailActors, getPopularMovieDetailVideos } from "../../../entities/movie/api";
+import { MovieLoading, PopularMovieDetail, PopularMovieDetailActors, PopularMovieDetailActorSection, PopularMovieDetailVideoSection, PopularMovieDetailVideos } from "../../../app/styles";
+import { PopularActorDetailItems } from "../../../components/items/detail/PopularActorDetailItems";
+import { PopularVideoDetailItems } from "../../../components/items/detail/PopularVideoDetailItems";
+import { PopularMovieDetailTitleSections } from "../../../components/sections/PopularMovieDetailTitleSections";
+import { PopularMovieDetailContentSections } from "../../../components/sections/PopularMovieDetailContentSections";
 
 export function PopularMovieDetailPage() {
     
     const [popularMoviesByIdData, setPopularMoviesByIdData] = useState<any>([]);
     const [popularActorsByIdData, setPopularActorsByIdData] = useState([]);
+    const [popularVideosByIdData, setPopularVideosByIdData] = useState([]);
 
     const { id } = useParams<{id: string}>();
 
@@ -28,28 +32,37 @@ export function PopularMovieDetailPage() {
                 console.error(error);
             })
 
-        console.log(popularMoviesByIdData);
-
+        getPopularMovieDetailVideos(id!)
+            .then(data => {
+                setPopularVideosByIdData(data);
+            })
+            .catch(error => {
+                console.error(error);
+            })
     }, [id]);
 
     return (
         <>
             { popularMoviesByIdData != '' ?
                 <PopularMovieDetail>
+                    <PopularMovieDetailTitleSections 
+                        title={popularMoviesByIdData.title}
+                        overview={popularMoviesByIdData.overview}>
+                    </PopularMovieDetailTitleSections>
 
-                    <PopularMovieDetailTitleSection>
-                        <PopularMovieDetailTitle>{popularMoviesByIdData.title}</PopularMovieDetailTitle>
-                        <PopularMovieDetailSubTitle>{popularMoviesByIdData.overview}</PopularMovieDetailSubTitle>
-                    </PopularMovieDetailTitleSection>
+                    <PopularMovieDetailContentSections
+                        vote_average={popularMoviesByIdData.vote_average}
+                        poster_path={popularMoviesByIdData.poster_path}>
+                    </PopularMovieDetailContentSections>
 
-                    <PopularMovieDetailContentSection>
-                        <PopularMovieDetailVoteAvg>❤ {popularMoviesByIdData.vote_average}</PopularMovieDetailVoteAvg>
-                        <PopularMovieDetailImage src={`https://image.tmdb.org/t/p/original/${popularMoviesByIdData.poster_path}`}></PopularMovieDetailImage>
-                    </PopularMovieDetailContentSection>
+                    <PopularMovieDetailVideoSection>
+                        <PopularMovieDetailVideos>해당 영화와 관련된 영상들을 찾아왔어요!!</PopularMovieDetailVideos>
+                        <PopularVideoDetailItems popularData={popularVideosByIdData} />
+                    </PopularMovieDetailVideoSection>
 
                     <PopularMovieDetailActorSection>
                         <PopularMovieDetailActors>이 영화에 등장한 인물들</PopularMovieDetailActors>
-                        <PopularActorItems popularActor={popularActorsByIdData} />
+                        <PopularActorDetailItems popularData={popularActorsByIdData} />
                     </PopularMovieDetailActorSection>
 
                 </PopularMovieDetail> : 
