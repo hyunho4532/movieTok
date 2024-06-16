@@ -1,4 +1,6 @@
-export type user = {
-    email: string,
-    nickname: string
+export interface User {
+    email: string | null;
+    nickname: string | null;
+    setEmail: (email: string | null) => void;
+    setNickname: (nickname: string | null) => void;
 }
