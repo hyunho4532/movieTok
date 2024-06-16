@@ -9,8 +9,8 @@ export function useHeaderItemHooks() {
         }
     }
 
-    const headerItemClose = () => {
-        setLoginOpen(false);
+    const headerItemClose = (isOpen: boolean) => {
+        setLoginOpen(loginOpen);
     }
 
     return {

@@ -1,9 +1,9 @@
 import axios from "axios";
-import { TMDB_API_KEY, TMDB_BASE_URL } from "../../constants/const/const";
+import { GOOGLE_BASE_URL, TMDB_API_KEY, TMDB_BASE_URL } from "../../constants/const/const";
 
-export const TMDBAxiosInstance = (type: string) => {
+export const AxiosInstance = (type: string) => {
     const instance = axios.create({
-        baseURL: TMDB_BASE_URL(type),
+        baseURL: type === 'movie' || type === 'actor' ? TMDB_BASE_URL(type) : GOOGLE_BASE_URL,
         timeout: 1000,
         headers: {
             Accept: 'application/json',

@@ -13,7 +13,7 @@ export function HeaderItem({children}: HeaderItemProps) {
                 {children}
             </HeaderItemTitle>
 
-            { loginOpen && <LoginDialog /> }
+            { loginOpen && <LoginDialog isOpen={loginOpen} /> }
         </>
     )
 }

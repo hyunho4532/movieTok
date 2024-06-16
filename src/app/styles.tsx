@@ -18,7 +18,7 @@ export const HeaderFix = styled.ul`
 
 export const DialogFix = styled.div`
     width: 560px;
-    height: 380px;
+    height: 440px;
 `
 
 export const DialogTitle = styled.p`
@@ -53,6 +53,14 @@ export const DialogAuthLogin = styled.div`
 
 export const DialogAuthLoginImage  = styled.img`
     width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 12px;
+`
+
+export const DialogAuthLoginTitle = styled.p`
+    margin: 0 auto;
+    margin-top: 16px;
 `
 
 export const HeaderItemTitle = styled.li`
