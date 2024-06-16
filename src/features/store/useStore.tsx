@@ -5,6 +5,5 @@ export const useStore = create<User>((set) => ({
     email: null, 
     nickname: null,
 
-    setEmail: (email: string | null) => set({ email }),
-    setNickname: (nickname: string | null) => set({ nickname })
+    setUserData: (email: string | null, nickname: string | null) => set({ email, nickname }),
 })); 
