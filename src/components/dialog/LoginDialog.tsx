@@ -2,7 +2,6 @@ import { Card, Dialog } from "@mui/material";
 import { DialogAuthLogin, DialogAuthLoginImage, DialogAuthLoginTitle, DialogAuthLogins, DialogFix, DialogSubTitle, DialogTitle } from "../../app/styles";
 import { LoginDialogTransition } from "./transition/LoginDialogTransition";
 import { useHeaderItemHooks } from "../header/hooks/HeaderItemHooks";
-import { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SCOPE, REDIRECT_URI } from "../../constants/const/const";
 import { googleLoginSetUp } from "../../entities/user/api";
 
 export function LoginDialog(isOpen: any) {
@@ -18,7 +17,7 @@ export function LoginDialog(isOpen: any) {
                     <DialogAuthLogin>
                         <Card className="w-[340px] h-[60px] flex">
                             <DialogAuthLoginImage src="src\assets\google_logo.png" />
-                            <DialogAuthLoginTitle onClick={() => googleLoginSetUp(GOOGLE_CLIENT_ID, REDIRECT_URI, GOOGLE_CLIENT_SCOPE)}>구글 로그인으로 시작하기</DialogAuthLoginTitle>
+                            <DialogAuthLoginTitle onClick={() => googleLoginSetUp()}>구글 로그인으로 시작하기</DialogAuthLoginTitle>
                         </Card>
                     </DialogAuthLogin>
                     <DialogAuthLogin>

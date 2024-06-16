@@ -1,12 +1,13 @@
 import { GOOGLE_REDIRECT_URL } from "../../../constants/const/const";
+import { AxiosInstance } from "../../../shared/axios"
 
-export const googleLoginSetUp = (client_id: string, redirect_uri: string, scope: string) => {
+export const googleLoginSetUp = async () => {
+
+    const axiosInstance = AxiosInstance('user');
+
     try {
-        fetch(GOOGLE_REDIRECT_URL)
-            .then(response => {
-                console.log(response.body);
-                window.location.href = GOOGLE_REDIRECT_URL;
-            })
+        const response = window.location.href = GOOGLE_REDIRECT_URL
+        console.log(response);
 
     } catch (err) {
         console.error(err);

@@ -1,5 +1,5 @@
 export const TMDB_BASE_URL = (type: string) => type === 'movie' ? "https://api.themoviedb.org/3/movie" : "https://api.themoviedb.org/3/person"
-export const GOOGLE_BASE_URL = "https://accounts.google.com/o/oauth2";
+export const SERVER_BASE_URL = "http://localhost:3000";
 
 export const TMDB_API_KEY = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJmZjVmZDI3NWVlNTExMWVkNDkzNDVjOTE2YzQ2YzE3NyIsInN1YiI6IjY0MTlhYjgwMGQ1ZDg1MDBiYTEwZDU0MiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.IZEX0iX9VfINBnA7RmKA-ImdpxtWyaU1nKl_rvg22KU";
 
