@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Group = styled.div`
+    text-align: center;
+    margin-top: 40px;
+`
+
 export const PopularMovieCardContianer = styled.div`
     perspective: 1000px;
 `

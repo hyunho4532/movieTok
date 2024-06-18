@@ -1,8 +1,9 @@
 import { Dialog } from "@mui/material";
-import { DialogCheck, DialogFix, DialogForm, DialogInput, DialogInputTitle, DialogTitle, InfoDialogSubTitle } from "../../app/styles";
+import { DialogCheck, DialogFix, DialogForm, DialogInput, DialogInputTitle, DialogTitle, Group, InfoDialogSubTitle } from "../../app/styles";
 import { RadioGroup } from '@headlessui/react'
 import { MOVIE_CATEGORY_LIST, MOVIE_PLATFORM_LIST } from "../../constants/const/const";
 import { userStore } from "../../features/store";
+import { LoginButton } from "../../shared/ui-kit/button";
 
 export function LoginInfoDialog(isOpen: any) {
 
@@ -71,6 +72,12 @@ export function LoginInfoDialog(isOpen: any) {
                         </div>
                     </RadioGroup>
                 </DialogCheck>
+
+                <Group>
+                    <LoginButton>
+                        사용자 등록 완료!
+                    </LoginButton>
+                </Group>
 
             </DialogFix>
         </Dialog>
