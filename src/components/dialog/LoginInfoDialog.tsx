@@ -74,7 +74,7 @@ export function LoginInfoDialog(isOpen: any) {
                 </DialogCheck>
 
                 <Group>
-                    <LoginButton>
+                    <LoginButton >
                         사용자 등록 완료!
                     </LoginButton>
                 </Group>
