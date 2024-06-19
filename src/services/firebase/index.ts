@@ -1,14 +1,21 @@
-import { addDoc, collection } from "firebase/firestore"; 
+import { doc, setDoc } from "firebase/firestore"; 
 import { db } from "../../../firebase.config";
+import { toastFailure, toastSuccess } from "../../shared/ui-kit/toast";
 
-export async function firebaseStoreInsert(email: string) {
+export async function firebaseStoreInsert(users: (string | null)[]) {
     try {
-        await addDoc(collection(db, "users"), {
-            email: email
+        await setDoc(doc(db, "users", users[0]!), {
+            email: users[1],
+            nickname: users[2],
+            movie_genre: users[3],
+            movie_platform: users[4],
+            movie_status: users[5]
         });
         
-        console.log("유저 데이터에 성공적으로 넣었습니다.");
+        toastSuccess("사용자 등록 완료!");
+
     } catch (e) {
-        console.error("유저 데이터에 넣는 도중 에러가 발생했습니다.", e);
+        console.log(e);
+        toastFailure("사용자 등록 실패!");
     }
 }
