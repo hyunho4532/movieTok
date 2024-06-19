@@ -1,5 +1,10 @@
 import styled from "styled-components";
 
+export const Group = styled.div`
+    text-align: center;
+    margin-top: 40px;
+`
+
 export const PopularMovieCardContianer = styled.div`
     perspective: 1000px;
 `
@@ -13,7 +18,105 @@ export const HeaderFix = styled.ul`
     display: flex;
     text-align: end;
     align-items: center;
-    justify-content: center; 
+    justify-content: center;
+`
+
+export const DialogFix = styled.div`
+    width: 560px;
+    height: 750px;
+`
+
+export const DialogTitle = styled.p`
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 32px;
+`
+
+export const DialogSubTitle = styled.p`
+    text-align: center;
+    font-size: 16px;
+    margin-top: 60px;
+    font-weight: bold;
+`
+
+export const InfoDialogSubTitle = styled.p`
+    font-size: 18px;
+    margin-top: 80px;
+    font-weight: bold;
+    transform: translate(15%, 0%);
+`
+
+export const DialogInputTitle = styled.p`
+    margin-right: 16px;
+    font-size: 16px;
+    font-weight: bold;
+`
+
+export const DialogForm = styled.div`
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+    transform: translate(15%, 0%);
+`
+
+export const DialogCheck = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 90px;
+`
+
+export const DialogInput = styled.input`
+    width: 300px;
+    height: 40px;
+    border: 0.1px solid grey;
+    font-size: 12px;
+    padding-left: 8px;
+`
+
+export const DialogAuthLogins = styled.div`
+    width: 360px;
+    height: 100px;
+    transform: translate(8%);
+    margin-top: 38px;
+`
+
+export const DialogAuthLogin = styled.div`
+    width: 200px;
+    height: 100px;
+    margin: 0 auto;
+    margin-top: 24px;
+    font-size: 16px;
+    font-weight: bold;
+`
+
+export const DialogAuthLoginImage  = styled.img`
+    width: 40px;
+    height: 40px;
+    margin-top: 8px;
+    margin-left: 12px;
+`
+
+export const DialogAuthLoginTitle = styled.p`
+    margin: 0 auto;
+    margin-top: 16px;
+    cursor: pointer;
+
+    &:hover {
+        color: grey;
+    }
+`
+
+export const HeaderItemTitle = styled.li`
+    margin-right: 96px;
+    cursor: pointer;
+    transition: transform 0.7s;
+    
+    &:hover {
+        transform: scale(1.5);
+        font-weight: bold;
+    }
 `
 
 export const PopularMovieItem = styled.div`

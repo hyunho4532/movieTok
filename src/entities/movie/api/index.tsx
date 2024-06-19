@@ -1,8 +1,9 @@
-import { TMDBAxiosInstance } from "../../../shared/axios/TMDBApi";
+import { AxiosInstance } from "../../../shared/axios";
 
 export const getPopularMovies = async (): Promise<any[]> => {
 
-    const axiosInstance = TMDBAxiosInstance('movie');
+    const axiosInstance = AxiosInstance('movie');
+
 
     try {
         const response = await axiosInstance.get('/popular?language=ko-KR&page=1');
@@ -21,7 +22,7 @@ export const getPopularMovies = async (): Promise<any[]> => {
 
 export const getPopularActors = async (): Promise<any[]> => {
 
-    const axiosInstance = TMDBAxiosInstance('actor');
+    const axiosInstance = AxiosInstance('actor');
 
     try {
         const response = await axiosInstance.get('/popular?language=ko-KR&page=1');
@@ -40,7 +41,7 @@ export const getPopularActors = async (): Promise<any[]> => {
 
 export const getPopularMovieDetail = async (movieId: string): Promise<any> => {
 
-    const axiosInstance = TMDBAxiosInstance('movie');
+    const axiosInstance = AxiosInstance('movie');
 
     try {
 
@@ -60,7 +61,7 @@ export const getPopularMovieDetail = async (movieId: string): Promise<any> => {
 
 export const getPopularMovieDetailVideos = async (movieId: string): Promise<any> => {
 
-    const axiosInstance = TMDBAxiosInstance('movie');
+    const axiosInstance = AxiosInstance('movie');
 
     try {
         const response = await axiosInstance.get(`/${movieId}/videos?language=ko-KR`);
@@ -79,7 +80,7 @@ export const getPopularMovieDetailVideos = async (movieId: string): Promise<any>
 
 export const getPopularMovieDetailActors = async (movieId: string): Promise<any> => {
 
-    const axiosInstance = TMDBAxiosInstance('movie');
+    const axiosInstance = AxiosInstance('movie');
 
     try {
         const response = await axiosInstance.get(`/${movieId}/credits?language=ko-KR`)
