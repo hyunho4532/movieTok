@@ -13,7 +13,7 @@ export function HeaderItem({children}: HeaderItemProps) {
 
     return (
         <>
-            <HeaderItemTitle className="mr-24" onClick={() => headerItemClick(children)}>
+            <HeaderItemTitle onClick={() => headerItemClick(children)}>
                 {children}
             </HeaderItemTitle>
 
