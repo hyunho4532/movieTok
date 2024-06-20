@@ -4,13 +4,14 @@ import { Dialog } from "../../components/dialog/modal/dialog";
 
 export const userStore = create<User>((set) => ({
     uid: null,
-    email: null, 
+    email: null,
+    profile_picture: null,
     nickname: null,
     status: null,
     platform: null,
     genre: null,
 
-    setUserData: (uid: string | null, email: string | null, nickname: string | null) => set({ uid, email, nickname }),
+    setUserData: (uid: string, email: string, profile_picture: string,  nickname: string) => set({ uid, email, profile_picture, nickname }),
     setStatus: (status: string | null) => set({ status }),
     setPlatform: (platform: string | null) => set({ platform }),
     setGenre: (genre: string | null) => set({ genre }),

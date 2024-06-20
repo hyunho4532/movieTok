@@ -10,15 +10,23 @@ export const PopularMovieCardContianer = styled.div`
 `
 
 export const HeaderSize = styled.div`
-    width: 1300px;
+    width: 100%;
     height: 60px;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
 `
 
 export const HeaderFix = styled.ul`
     display: flex;
-    text-align: end;
     align-items: center;
     justify-content: center;
+`
+
+export const HeaderProfileImage = styled.img`
+    width: 60px;
+    height: 60px;
+    border-radius: 30%;
 `
 
 export const DialogFix = styled.div`
@@ -109,7 +117,8 @@ export const DialogAuthLoginTitle = styled.p`
 `
 
 export const HeaderItemTitle = styled.li`
-    margin-right: 96px;
+    width: 70px;
+    margin-right: 40px;
     cursor: pointer;
     transition: transform 0.7s;
     
@@ -139,7 +148,7 @@ export const PopularVideoDetailItem = styled.div`
 
 export const PopularMovieItemFix = styled.div`
     width: 4800px;
-    height: 380px;    
+    height: 380px;
     display: flex;
     margin-top: 16px;
 `
