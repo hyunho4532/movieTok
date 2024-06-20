@@ -34,11 +34,13 @@ export function useLocalStorage(key: string) {
     const removeItem = (): void => {
         try {
             window.localStorage.removeItem(key);
-            toastSuccess("로그아웃이 정상적으로 진행되었어요!")
-
+            toastSuccess("로그아웃 정상 진행!")
+            window.location.reload()
+            
         } catch (error) {
             console.error(error);
-            toastFailure("로그아웃 진행 중 에러가 발생했어요!")
+            toastFailure("로그아웃 진행 중 에러 발생!")
+            window.location.reload()
         }
     };
 

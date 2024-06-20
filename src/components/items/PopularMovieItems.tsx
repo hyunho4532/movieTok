@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { PopularMovieCard } from "../card/PopularMovieCard";
 import { PopularMovieItem, PopularMovieItemFix } from "../../app/styles";
 import { PopularItemsProps } from "./props/PopularItemsProps";
@@ -8,16 +7,7 @@ export function PopularMovieItems(props: PopularItemsProps) {
         <PopularMovieItem>
             <PopularMovieItemFix>
                 {props.popularData.map((movie: any, index: any) => (
-                    <PopularMovieCard key={index}>
-                        <Link to={`http://localhost:5173/popular/movie/detail/${movie.id}`}>
-                            { movie.title.length > 13 ?
-                                <p className="text-start px-2 pt-2">{movie.title.substring(0, 13)}</p> :
-                                <p className="text-start px-2 pt-2">{movie.title}</p> }
-                                <p className="invisible">{movie.id}</p>
-                                
-                                <img src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} width="300" height="400" />
-                        </Link>
-                    </PopularMovieCard>
+                    <PopularMovieCard key={index} movie={movie} />
                 ))}
             </PopularMovieItemFix>
         </PopularMovieItem>

@@ -4,7 +4,8 @@ import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { HeaderIcon } from "./HeaderIcon";
 import { HeaderItem } from "./HeaderItem";
 import { HeaderProps } from "./props/HeaderProps";
-import { Card } from "@mui/material";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 export function Header(props: HeaderProps) {
 
@@ -24,6 +25,7 @@ export function Header(props: HeaderProps) {
                         </PopoverButton>
 
                         <PopoverPanel anchor="bottom" className="w-[220px] h-[140px] shadow-2xl flex-2 flex-col">
+
                             <HeaderProfileCard>
                                 <p>내 관심 영화 목록 ❤️</p>
                             </HeaderProfileCard>
@@ -39,6 +41,8 @@ export function Header(props: HeaderProps) {
                     </Popover>
                     
                 : <HeaderItem>{props.headerLogin}</HeaderItem> }
+
+                <ToastContainer />
                 
             </HeaderFix>
         </HeaderSize>

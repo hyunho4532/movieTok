@@ -1,3 +1,7 @@
 export interface PopularMovieCardProps {
-    children: React.ReactNode;
+    movie: {
+        id: number;
+        title: string;
+        poster_path: string;
+    };
 }

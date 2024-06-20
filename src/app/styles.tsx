@@ -23,6 +23,14 @@ export const HeaderFix = styled.ul`
     justify-content: center;
 `
 
+export const PopularMovieCardFix = styled.div`
+    display: flex;
+`
+
+export const PopularMovieFavorite = styled.p`
+    margin-top: 8px;
+`
+
 export const HeaderProfileImage = styled.img`
     width: 60px;
     height: 60px;
