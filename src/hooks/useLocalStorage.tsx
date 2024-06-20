@@ -1,3 +1,5 @@
+import { toastFailure, toastSuccess } from "../shared/ui-kit/toast";
+
 export function useLocalStorage(key: string) {
 
     const setItem = (userDataArray: (string | null)[] | null): void => {
@@ -29,5 +31,16 @@ export function useLocalStorage(key: string) {
         }
     };
 
-    return { setItem, getItem };
+    const removeItem = (): void => {
+        try {
+            window.localStorage.removeItem(key);
+            toastSuccess("로그아웃이 정상적으로 진행되었어요!")
+
+        } catch (error) {
+            console.error(error);
+            toastFailure("로그아웃 진행 중 에러가 발생했어요!")
+        }
+    };
+
+    return { setItem, getItem, removeItem };
 }

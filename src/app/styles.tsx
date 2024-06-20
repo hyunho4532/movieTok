@@ -29,6 +29,14 @@ export const HeaderProfileImage = styled.img`
     border-radius: 30%;
 `
 
+export const HeaderProfileCard = styled.div`
+    margin-top: 12px;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-left: 12px;
+    cursor: pointer;
+`
+
 export const DialogFix = styled.div`
     width: 560px;
     height: 750px;

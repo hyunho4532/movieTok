@@ -1,8 +1,10 @@
-import { HeaderFix, HeaderProfileImage, HeaderSize } from "../../app/styles";
+import { Popover, PopoverButton, PopoverPanel } from "@headlessui/react";
+import { HeaderFix, HeaderProfileCard, HeaderProfileImage, HeaderSize } from "../../app/styles";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { HeaderIcon } from "./HeaderIcon";
 import { HeaderItem } from "./HeaderItem";
 import { HeaderProps } from "./props/HeaderProps";
+import { Card } from "@mui/material";
 
 export function Header(props: HeaderProps) {
 
@@ -15,7 +17,28 @@ export function Header(props: HeaderProps) {
                 <HeaderItem>{props.headerRecommendMovie}</HeaderItem>
                 <HeaderItem>{props.headerMovieInsert}</HeaderItem>
 
-                { userPhotoUrl != null ? <HeaderProfileImage src={userPhotoUrl} /> : <HeaderItem>{props.headerLogin}</HeaderItem> }
+                { userPhotoUrl != null ? 
+                    <Popover className="relative">
+                        <PopoverButton>
+                            <HeaderProfileImage src={userPhotoUrl} /> 
+                        </PopoverButton>
+
+                        <PopoverPanel anchor="bottom" className="w-[220px] h-[140px] shadow-2xl flex-2 flex-col">
+                            <HeaderProfileCard>
+                                <p>내 관심 영화 목록 ❤️</p>
+                            </HeaderProfileCard>
+
+                            <HeaderProfileCard>
+                                <a href="">내 추천 영화 글 💡</a>
+                            </HeaderProfileCard>
+
+                            <HeaderProfileCard>
+                                <p onClick={useLocalStorage("userData").removeItem}>로그아웃 ✨</p>
+                            </HeaderProfileCard>
+                        </PopoverPanel>
+                    </Popover>
+                    
+                : <HeaderItem>{props.headerLogin}</HeaderItem> }
                 
             </HeaderFix>
         </HeaderSize>
