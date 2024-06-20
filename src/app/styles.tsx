@@ -23,10 +23,42 @@ export const HeaderFix = styled.ul`
     justify-content: center;
 `
 
+export const PopularMovieCardFix = styled.div`
+    display: flex;
+`
+
+export const PopularMovieTitle = styled.p`
+    text-align: start;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+`
+
+export const PopularMovieFavorite = styled.p`
+    margin-top: 8px;
+`
+
+export const PopularMovieId = styled.p`
+    visibility: hidden; 
+`
+
+export const PopularMovieImage = styled.img`
+    width: 300px;
+    height: 300px;
+`
+
 export const HeaderProfileImage = styled.img`
     width: 60px;
     height: 60px;
     border-radius: 30%;
+`
+
+export const HeaderProfileCard = styled.div`
+    margin-top: 12px;
+    font-size: 15px;
+    padding-top: 8px;
+    padding-left: 12px;
+    cursor: pointer;
 `
 
 export const DialogFix = styled.div`

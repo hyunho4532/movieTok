@@ -1,10 +1,9 @@
 import { Dialog } from "@mui/material";
-import { DialogCheck, DialogFix, DialogForm, DialogInput, DialogInputTitle, DialogTitle, Group, InfoDialogSubTitle } from "../../app/styles";
+import { DialogCheck, DialogFix, DialogTitle, Group } from "../../app/styles";
 import { RadioGroup } from '@headlessui/react'
 import { MOVIE_CATEGORY_LIST, MOVIE_PLATFORM_LIST } from "../../constants/const/const";
 import { userStore } from "../../features/store";
 import { LoginButton } from "../../shared/ui-kit/button";
-import { ToastContainer } from "react-toastify";
 
 export function LoginInfoDialog(isOpen: any) {
 
