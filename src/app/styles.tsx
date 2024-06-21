@@ -9,6 +9,11 @@ export const PopularMovieCardContianer = styled.div`
     perspective: 1000px;
 `
 
+export const PopularActorDetailCard = styled.div`
+    border-radius: 1.5rem;
+    margin-right: 8px;
+`
+
 export const HeaderSize = styled.div`
     width: 100%;
     height: 60px;
