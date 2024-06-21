@@ -2,7 +2,7 @@ import { toastFailure, toastSuccess } from "../shared/ui-kit/toast";
 
 export function useLocalStorage(key: string) {
 
-    const setItem = (userDataArray: (string | null)[] | null): void => {
+    const setItem = (userDataArray: any): void => {
         try {
             if (userDataArray != null) {
                 window.localStorage.setItem(key, JSON.stringify(userDataArray));

@@ -36,6 +36,7 @@ export const PopularMovieTitle = styled.p`
 
 export const PopularMovieFavorite = styled.p`
     margin-top: 8px;
+    cursor: pointer;
 `
 
 export const PopularMovieId = styled.p`

@@ -1,3 +1,4 @@
 export interface PopularMovie {
-    title: string | null,
+    isFavorite: boolean;
+    setIsFavorite: (isFavorite: boolean) => void;
 }
