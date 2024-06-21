@@ -11,7 +11,7 @@ export const googleLoginSetUp = async () => {
                     const userDataFromArray = [ auth.currentUser.uid, data.user.email, auth.currentUser.photoURL, data.user.displayName ];
 
                     if (userDataFromArray != null) {
-                        useLocalStorage("userData").setItem(userDataFromArray!);
+                        useLocalStorage("userData").setItem(userDataFromArray);
                         userStore.getState().setUserData(userDataFromArray[0]!, userDataFromArray[1]!, userDataFromArray[2]!, userDataFromArray[3]!);
                         dialogStore.getState().setIsOpen(false);
                         dialogStore.getState().setIsInfoOpen(true);

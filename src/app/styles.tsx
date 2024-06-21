@@ -36,6 +36,7 @@ export const PopularMovieTitle = styled.p`
 
 export const PopularMovieFavorite = styled.p`
     margin-top: 8px;
+    cursor: pointer;
 `
 
 export const PopularMovieId = styled.p`
@@ -207,8 +208,21 @@ export const PopularActorDetailItemFix = styled.div`
 `
 
 export const PopularMovieDetail = styled.div`
-    width: 370px;
-    margin: 0 auto;
+    width: 1200px;
+    position: relative;
+    height: auto;
+`
+
+export const PopularMovieDetailOverlay = styled.div`
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    box-sizing: border-box;
 `
 
 export const PopularMovieSection = styled.section`
@@ -237,13 +251,13 @@ export const PopularMovieDetailContentSection = styled.section`
 export const PopularMovieDetailVideoSection = styled.section`
     width: 380px;
     height: 60px;
-    margin-top: 300px;
+    transform : translate(200%, -350%)
 `
 
 export const PopularMovieDetailActorSection = styled.section`
     width: 380px;
     height: 60px;
-    margin-top: 380px;
+    transform : translate(200%, -520%)
 `
 
 export const PopularMovieArticle = styled.article`
@@ -255,7 +269,7 @@ export const PopularActorArticle = styled.article`
 `
 
 export const PopularActorDetailImage = styled.img`
-    width: 160px;
+    width: 100%;
     height: 140px;
     border-radius: 24px;
 `

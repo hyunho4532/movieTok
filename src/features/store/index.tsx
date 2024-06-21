@@ -1,6 +1,7 @@
 import { create } from "zustand";
 import { User } from "../../entities/user/model/user";
 import { Dialog } from "../../components/dialog/modal/dialog";
+import { PopularMovie } from "../../entities/movie/model/PopularMovie";
 
 export const userStore = create<User>((set) => ({
     uid: null,
@@ -23,4 +24,9 @@ export const dialogStore = create<Dialog>((set) => ({
 
     setIsOpen: (isOpen: boolean) => set({ isOpen }),
     setIsInfoOpen: (isInfoOpen: boolean) => set({ isInfoOpen })
+}));
+
+export const popularMovieStore = create<PopularMovie>((set) => ({
+    isFavorite: false,
+    setIsFavorite: (isFavorite: boolean) => set({ isFavorite })
 }));
