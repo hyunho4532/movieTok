@@ -24,7 +24,8 @@ export async function insertPopularMovies(popularMovies: (string | null)[]) {
         if (popularMovies[2] === "false") {
             await addDoc(collection(db, "popularMovies"), {
                 userId: popularMovies[0],
-                title: popularMovies[1]
+                title: popularMovies[1],
+                status: popularMovies[2]
             });
     
             toastSuccess("즐겨 찾기로 등록했어요! 😂");
