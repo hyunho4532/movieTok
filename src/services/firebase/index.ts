@@ -2,7 +2,7 @@ import { doc, setDoc } from "firebase/firestore";
 import { db } from "../../../firebase.config";
 import { toastFailure, toastSuccess } from "../../shared/ui-kit/toast";
 
-export async function firebaseStoreInsert(users: (string | null)[]) {
+export async function insertUsers(users: (string | null)[]) {
     try {
         await setDoc(doc(db, "users", users[0]!), {
             email: users[1],
@@ -15,7 +15,14 @@ export async function firebaseStoreInsert(users: (string | null)[]) {
         toastSuccess("사용자 등록 완료!");
 
     } catch (e) {
-        console.log(e);
         toastFailure("사용자 등록 실패!");
+    }
+}
+
+export async function insertPopularMovies() {
+    try {
+        
+    } catch (e) {
+        toastFailure("인기 영화 등록 실패!");
     }
 }

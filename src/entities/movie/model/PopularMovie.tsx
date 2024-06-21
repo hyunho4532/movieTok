@@ -1,4 +1,3 @@
 export interface PopularMovie {
-    title: string,
-    country: string,
+    title: string | null,
 }
