@@ -236,6 +236,12 @@ export const PopularMovieSection = styled.section`
     margin-top: 120px;
 `
 
+export const InsertSection = styled.section`
+    width: 100%;
+    height: 60px;
+    margin-top: 120px;
+`
+
 export const PopularActorSection = styled.section`
     width: 880px;
     height: 60px;
@@ -267,6 +273,43 @@ export const PopularMovieDetailActorSection = styled.section`
 
 export const PopularMovieArticle = styled.article`
 
+`
+
+export const InsertArticle = styled.article`
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+`
+
+export const InsertTitle = styled.h1`
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 22px;
+    font-weight: bold;
+`
+
+export const InsertCard = styled.div`
+    width: 360px;
+    height: 180px;
+    box-shadow: 0 0 10px grey;
+    margin-top: 128px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    
+    &:hover {
+        transform: scale(1.04);
+    }
+`
+
+export const Insert = styled.h1`
+    padding-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+`
+
+export const InsertContent = styled.p`
+    padding-top: 8px;
 `
 
 export const PopularActorArticle = styled.article`

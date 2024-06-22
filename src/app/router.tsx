@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { MainPage } from "../pages/MainPage";
 import { PopularMovieDetailPage } from "../pages/movie/detail/PopularMovieDetailPage";
-import { InsertMoviePage } from "../pages/movie/InsertMoviePage";
+import { InsertPage } from "../pages/movie/InsertPage";
 
 export const router = createBrowserRouter ([
     {
@@ -18,7 +18,7 @@ export const router = createBrowserRouter ([
         element: <PopularMovieDetailPage />
     },
     {
-        path: "/insert/movie",
-        element: <InsertMoviePage />
+        path: "/insert",
+        element: <InsertPage />
     }
   ])
