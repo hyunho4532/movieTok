@@ -1,18 +1,18 @@
-import { Card, Dialog, Pagination } from "@mui/material";
+import { Card, Dialog } from "@mui/material";
 import { useHeaderItemHooks } from "../header/hooks/HeaderItemHooks";
 import { Article, Grid, DialogFix, DialogTitle, PaginationWrapper, SelectWrapper, Image } from "../../app/styles";
 import { Select } from "@headlessui/react";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { getGenreList } from "../../entities/genre/api";
 import { getDiscoverListFromMovie } from "../../entities/discover/api";
+import { discoverStore, genreStore, paginationStore } from "../../features/store";
+import { CustomPagination } from "../../shared/ui-kit/pagination";
 
 export function MovieDialog(isOpen: any) {
 
-    const [ genreList, setGenreList ] = useState<any>([]);
-    const [ discoverList, setDiscoverList ] = useState<any>([]);
-    const [ totalMovies, setTotalMovies ] = useState(0);
-    const [ currentPage, setCurrentPage ] = useState(1);
-    const [selectedGenre, setSelectedGenre] = useState(null);
+    const { discoverList, setDiscoverList } = discoverStore();
+    const { genreList, setGenreList, setSelectedGenre } = genreStore();
+    const { setTotalMovies } = paginationStore();
     const { headerItemClose } = useHeaderItemHooks();
 
     useEffect(() => {
@@ -40,11 +40,6 @@ export function MovieDialog(isOpen: any) {
         })
     }
 
-    const handlePageChange = (event: any, value: any) => {
-        setCurrentPage(value);
-        fetchMovies(selectedGenre, value);
-    }
-
     return (
         <>
             <Dialog open={isOpen} onClose={headerItemClose}>
@@ -53,26 +48,22 @@ export function MovieDialog(isOpen: any) {
                     <Article>
                         <SelectWrapper>
                             <Select onChange={handleGenreChange}>
-                                { genreList.map((genre: any) => (
+                                { genreList && genreList.map((genre: any) => (
                                     <option value={genre.id}>{genre.name}</option>
                                 ))}
                             </Select>
                         </SelectWrapper>
 
                         <Grid>
-                            { discoverList.map((discover: any) => (
+                            { discoverList && discoverList.map((discover: any) => (
                                 <Card className="flex h-[260px]">
                                     <Image src={`https://image.tmdb.org/t/p/original/${discover.poster_path}`} />
                                 </Card>
                             ))}
                         </Grid>
-   
 
                         <PaginationWrapper>
-                            <Pagination
-                                count={Math.ceil(totalMovies / 20)}
-                                page={currentPage} 
-                                onChange={handlePageChange} />
+                            <CustomPagination setDiscoverList={setDiscoverList} setTotalMovies={setTotalMovies} />
                         </PaginationWrapper>
 
                     </Article>
