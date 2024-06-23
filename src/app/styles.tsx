@@ -14,6 +14,11 @@ export const PopularActorDetailCard = styled.div`
     margin-right: 8px;
 `
 
+export const Image = styled.img`
+    width: 100%;
+    height: 260px;
+`
+
 export const HeaderSize = styled.div`
     width: 100%;
     height: 60px;
@@ -312,6 +317,29 @@ export const InsertCard = styled.div`
         transform: scale(1.04);
     }
 `
+
+export const SelectWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 40px;
+`;
+
+export const Grid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+`;
+
+export const PaginationWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 40px;
+`;
 
 export const Insert = styled.h1`
     padding-top: 12px;
