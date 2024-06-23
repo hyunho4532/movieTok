@@ -275,8 +275,11 @@ export const PopularMovieArticle = styled.article`
 
 `
 
-export const InsertArticle = styled.article`
+export const Article = styled.article`
     margin: 0 auto;
+`
+
+export const InsertArticle = styled(Article)`\
     display: flex;
     justify-content: space-evenly;
 `
@@ -287,6 +290,14 @@ export const InsertTitle = styled.h1`
     margin: 0 auto;
     font-size: 22px;
     font-weight: bold;
+`
+
+export const Input = styled.input`
+    width: 420px;
+    height: 40px;
+    margin-top: 30px;
+    border: 0.3px solid grey;
+    padding-left: 8px;
 `
 
 export const InsertCard = styled.div`

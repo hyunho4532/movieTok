@@ -2,7 +2,8 @@ import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import { MainPage } from "../pages/MainPage";
 import { PopularMovieDetailPage } from "../pages/movie/detail/PopularMovieDetailPage";
-import { InsertPage } from "../pages/movie/InsertPage";
+import { InsertPage } from "../pages/InsertPage";
+import { InsertMoviePage } from "../pages/movie/InsertMoviePage";
 
 export const router = createBrowserRouter ([
     {
@@ -20,5 +21,9 @@ export const router = createBrowserRouter ([
     {
         path: "/insert",
         element: <InsertPage />
+    },
+    {
+        path: "/insert/movie",
+        element: <InsertMoviePage />
     }
   ])
