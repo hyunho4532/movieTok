@@ -4,14 +4,15 @@ import { Article, Grid, DialogFix, DialogTitle, PaginationWrapper, SelectWrapper
 import { Select } from "@headlessui/react";
 import { useEffect } from "react";
 import { getGenreList } from "../../entities/genre/api";
-import { getDiscoverListFromMovie } from "../../entities/discover/api";
-import { discoverStore, genreStore, paginationStore } from "../../features/store";
+import { dialogStore, discoverStore, genreStore, paginationStore } from "../../features/store";
 import { CustomPagination } from "../../shared/ui-kit/pagination";
+import { fetchMovies } from "../../entities/discover/getter";
 
 export function MovieDialog(isOpen: any) {
 
-    const { discoverList, setDiscoverList } = discoverStore();
+    const { discoverList, setDiscoverList, setDiscoverTitle } = discoverStore();
     const { genreList, setGenreList, setSelectedGenre } = genreStore();
+    const { setIsOpen } = dialogStore();
     const { setTotalMovies } = paginationStore();
     const { headerItemClose } = useHeaderItemHooks();
 
@@ -28,16 +29,12 @@ export function MovieDialog(isOpen: any) {
     const handleGenreChange = (event: any) => {
         const genreId = event.target.value;
         setSelectedGenre(genreId);
-        fetchMovies(genreId, 1);
+        fetchMovies(setDiscoverList, setTotalMovies, genreId, 1);
     }
 
-    const fetchMovies = (genreId: any, page: any) => {
-        getDiscoverListFromMovie(genreId, page).then(data => {
-            setDiscoverList(data.results);
-            setTotalMovies(data.total_pages);
-        }).catch(error => {
-            console.error(error);
-        })
+    const discoverMovieClick = (title: string) => {
+        setIsOpen(false);
+        setDiscoverTitle(title);
     }
 
     return (
@@ -56,7 +53,7 @@ export function MovieDialog(isOpen: any) {
 
                         <Grid>
                             { discoverList && discoverList.map((discover: any) => (
-                                <Card className="flex h-[260px]">
+                                <Card className="flex h-[260px] cursor-pointer" onClick={() => discoverMovieClick(discover.title)}>
                                     <Image src={`https://image.tmdb.org/t/p/original/${discover.poster_path}`} />
                                 </Card>
                             ))}
@@ -65,7 +62,6 @@ export function MovieDialog(isOpen: any) {
                         <PaginationWrapper>
                             <CustomPagination setDiscoverList={setDiscoverList} setTotalMovies={setTotalMovies} />
                         </PaginationWrapper>
-
                     </Article>
                 </DialogFix>
             </Dialog>

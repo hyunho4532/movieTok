@@ -1,6 +1,6 @@
 export const TMDB_BASE_URL = (type: string) => 
     type === 'movie' ? "https://api.themoviedb.org/3/movie" : 
-    type === 'person' ? "https://api.themoviedb.org/3/person" : 
+    type === 'actor' ? "https://api.themoviedb.org/3/person" : 
     type === 'genre' ? "https://api.themoviedb.org/3/genre" :
     "https://api.themoviedb.org/3/discover"
     

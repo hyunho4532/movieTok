@@ -242,9 +242,9 @@ export const PopularMovieSection = styled.section`
 `
 
 export const InsertSection = styled.section`
-    width: 100%;
+    width: 620px;
     height: 60px;
-    margin-top: 120px;
+    margin: 0 auto;
 `
 
 export const PopularActorSection = styled.section`
@@ -281,7 +281,7 @@ export const PopularMovieArticle = styled.article`
 `
 
 export const Article = styled.article`
-    margin: 0 auto;
+    text-align: left;
 `
 
 export const InsertArticle = styled(Article)`\
@@ -290,11 +290,10 @@ export const InsertArticle = styled(Article)`\
 `
 
 export const InsertTitle = styled.h1`
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto;
+    text-align: left;
     font-size: 22px;
     font-weight: bold;
+    margin-top: 120px;
 `
 
 export const Input = styled.input`

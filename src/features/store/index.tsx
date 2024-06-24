@@ -4,7 +4,7 @@ import { Dialog } from "../../components/dialog/modal/dialog";
 import { PopularMovie } from "../../entities/movie/model/PopularMovie";
 import { Pagination } from "../../shared/ui-kit/pagination/model/Pagination";
 import { Genre } from "../../entities/genre/modal/genre";
-import { Discover } from "../../entities/discover/modal/Discover";
+import { Discover } from "../../entities/discover/modal/discover";
 
 export const userStore = create<User>((set) => ({
     uid: null,
@@ -24,6 +24,8 @@ export const userStore = create<User>((set) => ({
 export const discoverStore = create<Discover>((set) => ({
     discoverList: null,
     setDiscoverList: (discoverList) => set({ discoverList }),
+    discoverTitle: null,
+    setDiscoverTitle: (discoverTitle: string) => set({ discoverTitle })
 }));
 
 export const genreStore = create<Genre>((set) => ({
