@@ -16,6 +16,7 @@ export async function insertUsers(users: (string | null)[]) {
 
     } catch (e) {
         toastFailure("사용자 등록 실패!");
+        console.error(e);
     }
 }
 
@@ -52,5 +53,11 @@ export async function insertPopularMovies(popularMovies: (string | null)[]) {
 
     } catch (e) {
         toastFailure("인기 영화 등록 실패!");
+        console.error(e);
     }
+}
+
+export async function insertMovies(impressionMovie: string, movieIsFun: string, movieIsRecom: string, discoverTitle: string) {
+    
+    console.log(movieIsFun, impressionMovie);
 }

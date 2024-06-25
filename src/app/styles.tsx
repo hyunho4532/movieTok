@@ -284,6 +284,15 @@ export const Article = styled.article`
     text-align: left;
 `
 
+export const Spacer = styled.p`
+    margin-top: 20px;
+    visibility: hidden;
+`
+
+export const Div = styled.div`
+    margin-top: 12px;
+`
+
 export const InsertArticle = styled(Article)`\
     display: flex;
     justify-content: space-evenly;
@@ -293,13 +302,12 @@ export const InsertTitle = styled.h1`
     text-align: left;
     font-size: 22px;
     font-weight: bold;
-    margin-top: 120px;
+    margin-top: 60px;
 `
 
 export const Input = styled.input`
     width: 420px;
     height: 40px;
-    margin-top: 30px;
     border: 0.3px solid grey;
     padding-left: 8px;
 `

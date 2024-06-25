@@ -1,8 +1,9 @@
 import { Button } from "@mui/material";
-import { insertUsers } from "../../../services/firebase";
-import { userStore } from "../../../features/store";
+import { insertMovies, insertUsers } from "../../../services/firebase";
+import { discoverStore, userStore } from "../../../features/store";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useEffect } from "react";
 
 export const LoginButton = ({ children }: any) => {
 
@@ -12,6 +13,22 @@ export const LoginButton = ({ children }: any) => {
     return (
         <>
             <Button className="w-[400px] h-[40px] text-center" variant="contained" onClick={() => insertUsers(userDataFromArray)}>{children}</Button>
+            <ToastContainer />
+        </>
+    )
+}
+
+export const MovieButton = ({ props, children }: any) => {
+
+    const { movieisFun, movieIsRecom, impressionMovie, setImpressionMovie, discoverTitle } = discoverStore();
+    
+    useEffect(() => {
+        setImpressionMovie(props.current.getInstance().getMarkdown());
+    }, [impressionMovie]);
+
+    return (
+        <>
+            <Button className="w-[620px] h-[40px] text-center" variant="contained" onClick={() => insertMovies(impressionMovie!, movieisFun!, movieIsRecom!, discoverTitle!)}>{children}</Button>
             <ToastContainer />
         </>
     )
