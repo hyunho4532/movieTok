@@ -2,7 +2,6 @@ import { Button } from "@headlessui/react";
 import { Article, Div, Group, Input, InsertSection, InsertTitle, Spacer } from "../../app/styles";
 import { dialogStore, discoverStore } from "../../features/store";
 import { MovieDialog } from "../../components/dialog/MovieDialog";
-import { FormControlLabel, Radio, RadioGroup } from "@mui/material";
 import { Editor } from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
 import { MovieButton } from "../../shared/ui-kit/button";
@@ -12,15 +11,15 @@ import { CustomSelect } from "../../shared/ui-kit/select";
 export function InsertMoviePage() {
 
     const { isOpen, setIsOpen } = dialogStore();
-    const { discoverTitle, movieisFun, setMovieIsFun, movieIsRecom, setMovieIsRecom } = discoverStore();
-    const editorRef = createRef();
+    const { discoverTitle, movieisFun, setMovieIsFun, movieIsRecom, setMovieIsRecom, impressionMovie, setImpressionMovie } = discoverStore();
+    const editorRef = createRef<Editor>();
 
     const movieDialogOpen = () => {
         setIsOpen(true);
     }
 
-    const isMovieRecomChange = (event: any) => {
-        setMovieIsRecom(event.target.value);
+    const editorChange = () => {
+        setImpressionMovie(editorRef.current?.getInstance().getMarkdown());
     }
     
     return (
@@ -56,6 +55,7 @@ export function InsertMoviePage() {
                             initialEditType="markdown"
                             initialValue="hello"
                             ref={editorRef}
+                            onChange={editorChange}
                         />
                     </Div>
                 </Article>
@@ -72,7 +72,7 @@ export function InsertMoviePage() {
                 </Article>
                 
                 <Group>
-                    <MovieButton props={editorRef}>
+                    <MovieButton impressionMovie={impressionMovie}>
                         영화 등록 완료!
                     </MovieButton>
                 </Group>

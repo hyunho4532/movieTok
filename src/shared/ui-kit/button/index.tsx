@@ -3,7 +3,7 @@ import { insertMovies, insertUsers } from "../../../services/firebase";
 import { discoverStore, userStore } from "../../../features/store";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import { useEffect } from "react";
+import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 export const LoginButton = ({ children }: any) => {
 
@@ -18,17 +18,15 @@ export const LoginButton = ({ children }: any) => {
     )
 }
 
-export const MovieButton = ({ props, children }: any) => {
+export const MovieButton = ({ impressionMovie, children }: any) => {
 
-    const { movieisFun, movieIsRecom, impressionMovie, setImpressionMovie, discoverTitle } = discoverStore();
-    
-    useEffect(() => {
-        setImpressionMovie(props.current.getInstance().getMarkdown());
-    }, [impressionMovie]);
+    const authuid = useLocalStorage("userData").getItem(0);
+    const { movieisFun, movieIsRecom, discoverTitle } = discoverStore();
+    const movieDataFromArray = [authuid, discoverTitle, impressionMovie, movieisFun, movieIsRecom]
 
     return (
         <>
-            <Button className="w-[620px] h-[40px] text-center" variant="contained" onClick={() => insertMovies(impressionMovie!, movieisFun!, movieIsRecom!, discoverTitle!)}>{children}</Button>
+            <Button className="w-[620px] h-[40px] text-center" variant="contained" onClick={() => insertMovies(movieDataFromArray)}>{children}</Button>
             <ToastContainer />
         </>
     )
