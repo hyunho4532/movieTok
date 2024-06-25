@@ -1,8 +1,9 @@
 import { Button } from "@mui/material";
-import { insertUsers } from "../../../services/firebase";
-import { userStore } from "../../../features/store";
+import { insertMovies, insertUsers } from "../../../services/firebase";
+import { discoverStore, userStore } from "../../../features/store";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { useLocalStorage } from "../../../hooks/useLocalStorage";
 
 export const LoginButton = ({ children }: any) => {
 
@@ -12,6 +13,20 @@ export const LoginButton = ({ children }: any) => {
     return (
         <>
             <Button className="w-[400px] h-[40px] text-center" variant="contained" onClick={() => insertUsers(userDataFromArray)}>{children}</Button>
+            <ToastContainer />
+        </>
+    )
+}
+
+export const MovieButton = ({ impressionMovie, children }: any) => {
+
+    const authuid = useLocalStorage("userData").getItem(0);
+    const { movieisFun, movieIsRecom, discoverTitle } = discoverStore();
+    const movieDataFromArray = [authuid, discoverTitle, impressionMovie, movieisFun, movieIsRecom]
+
+    return (
+        <>
+            <Button className="w-[620px] h-[40px] text-center" variant="contained" onClick={() => insertMovies(movieDataFromArray)}>{children}</Button>
             <ToastContainer />
         </>
     )

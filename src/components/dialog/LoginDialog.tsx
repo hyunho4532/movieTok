@@ -1,6 +1,6 @@
 import { Card, Dialog } from "@mui/material";
 import { DialogAuthLogin, DialogAuthLoginImage, DialogAuthLoginTitle, DialogAuthLogins, DialogFix, DialogSubTitle, DialogTitle } from "../../app/styles";
-import { LoginDialogTransition } from "./transition/LoginDialogTransition";
+import { LoginDialogTransition } from "../../shared/ui-kit/transition/LoginDialogTransition";
 import { useHeaderItemHooks } from "../header/hooks/HeaderItemHooks";
 import { googleLoginSetUp } from "../../entities/user/api";
 

@@ -9,6 +9,16 @@ export const PopularMovieCardContianer = styled.div`
     perspective: 1000px;
 `
 
+export const PopularActorDetailCard = styled.div`
+    border-radius: 1.5rem;
+    margin-right: 8px;
+`
+
+export const Image = styled.img`
+    width: 100%;
+    height: 260px;
+`
+
 export const HeaderSize = styled.div`
     width: 100%;
     height: 60px;
@@ -231,6 +241,12 @@ export const PopularMovieSection = styled.section`
     margin-top: 120px;
 `
 
+export const InsertSection = styled.section`
+    width: 620px;
+    height: 60px;
+    margin: 0 auto;
+`
+
 export const PopularActorSection = styled.section`
     width: 880px;
     height: 60px;
@@ -262,6 +278,84 @@ export const PopularMovieDetailActorSection = styled.section`
 
 export const PopularMovieArticle = styled.article`
 
+`
+
+export const Article = styled.article`
+    text-align: left;
+`
+
+export const Spacer = styled.p`
+    margin-top: 20px;
+    visibility: hidden;
+`
+
+export const Div = styled.div`
+    margin-top: 12px;
+`
+
+export const InsertArticle = styled(Article)`\
+    display: flex;
+    justify-content: space-evenly;
+`
+
+export const InsertTitle = styled.h1`
+    text-align: left;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 60px;
+`
+
+export const Input = styled.input`
+    width: 420px;
+    height: 40px;
+    border: 0.3px solid grey;
+    padding-left: 8px;
+`
+
+export const InsertCard = styled.div`
+    width: 360px;
+    height: 180px;
+    box-shadow: 0 0 10px grey;
+    margin-top: 128px;
+    cursor: pointer;
+    transition: transform 0.3s;
+    
+    &:hover {
+        transform: scale(1.04);
+    }
+`
+
+export const SelectWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 40px;
+`;
+
+export const Grid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 10px;
+`;
+
+export const PaginationWrapper = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 40px;
+`;
+
+export const Insert = styled.h1`
+    padding-top: 12px;
+    font-size: 18px;
+    font-weight: bold;
+`
+
+export const InsertContent = styled.p`
+    padding-top: 8px;
 `
 
 export const PopularActorArticle = styled.article`

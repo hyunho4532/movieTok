@@ -6,6 +6,7 @@ import { HeaderItem } from "./HeaderItem";
 import { HeaderProps } from "./props/HeaderProps";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
+import { Link } from "react-router-dom";
 
 export function Header(props: HeaderProps) {
 
@@ -16,7 +17,9 @@ export function Header(props: HeaderProps) {
             <HeaderFix>
                 <HeaderIcon src="dist/movietok_logo.jpg" width='120' height='120' />
                 <HeaderItem>{props.headerRecommendMovie}</HeaderItem>
-                <HeaderItem>{props.headerMovieInsert}</HeaderItem>
+                <Link to="http://localhost:5173/insert">
+                    <HeaderItem>{props.headerMovieInsert}</HeaderItem>
+                </Link>
 
                 { userPhotoUrl != null ? 
                     <Popover className="relative">
