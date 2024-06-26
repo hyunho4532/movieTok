@@ -74,3 +74,19 @@ export async function insertMovies(movies: (string | null)[]) {
         console.error(e);
     }
 }
+
+export async function getMovies() {
+    try {
+        const querySnapshot = await getDocs(collection(db, "movies"));
+        const movies: any[] = [];
+
+        querySnapshot.forEach((doc) => {
+            movies.push({ id: doc.id, ...doc.data() });
+        });
+
+        console.log(movies);
+        
+    } catch (e) {
+        console.error(e);
+    }
+}
