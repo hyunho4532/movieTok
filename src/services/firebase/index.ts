@@ -75,7 +75,8 @@ export async function insertMovies(movies: (string | null)[]) {
     }
 }
 
-export async function getMovies() {
+export async function getMovies(setMovie: any) {
+
     try {
         const querySnapshot = await getDocs(collection(db, "movies"));
         const movies: any[] = [];
@@ -84,7 +85,7 @@ export async function getMovies() {
             movies.push({ id: doc.id, ...doc.data() });
         });
 
-        console.log(movies);
+        setMovie(movies);
         
     } catch (e) {
         console.error(e);

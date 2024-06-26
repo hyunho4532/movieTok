@@ -1,6 +1,8 @@
 export type Discover = {
     discoverList: any[] | null,
     setDiscoverList: React.Dispatch<any>,
+    movieList: any[] | null,
+    setMovieList: React.Dispatch<any>,
     discoverTitle: string | null,
     setDiscoverTitle: (title: string) => void,
     movieisFun: string | null,

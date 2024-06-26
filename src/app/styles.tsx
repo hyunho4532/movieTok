@@ -241,10 +241,31 @@ export const PopularMovieSection = styled.section`
     margin-top: 120px;
 `
 
+export const SelectSection = styled.section`
+    width: 820px;
+    height: 60px;
+    margin: 0 auto;
+`
+
 export const InsertSection = styled.section`
     width: 620px;
     height: 60px;
     margin: 0 auto;
+`
+
+export const Title = styled.h1`
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+`
+
+export const MovieContent = styled.div`
+    
+`
+
+export const MovieTitle = styled.p`
+    padding-top: 16px;
+    font-size: 16px;
 `
 
 export const PopularActorSection = styled.section`

@@ -24,6 +24,8 @@ export const userStore = create<User>((set) => ({
 export const discoverStore = create<Discover>((set) => ({
     discoverList: null,
     setDiscoverList: (discoverList) => set({ discoverList }),
+    movieList: null,
+    setMovieList: (movieList) => set({ movieList }),
     discoverTitle: null,
     setDiscoverTitle: (discoverTitle: string) => set({ discoverTitle }),
     movieisFun: null,

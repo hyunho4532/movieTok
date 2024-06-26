@@ -15,7 +15,7 @@ export function Header(props: HeaderProps) {
     return (
         <HeaderSize>
             <HeaderFix>
-                <HeaderIcon src="dist/movietok_logo.jpg" width='120' height='120' />
+                <HeaderIcon src="public\movietok_logo.jpg" width='120' height='120' />
                 <Link to="http://localhost:5173/movie">
                     <HeaderItem>{props.headerRecommendMovie}</HeaderItem>
                 </Link>
