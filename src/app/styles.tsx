@@ -270,9 +270,17 @@ export const MovieStatus = styled.div`
     justify-content: space-evenly;
 `
 
+export const MovieDate = styled.p`
+    font-size: 12px;
+    text-align: center;
+    padding-top: 24px;
+    padding-right: 12px;
+`
+
 export const MovieTitle = styled.p`
     padding-top: 16px;
     font-size: 16px;
+    font-family: 'JamsilBold', sans-serif;
 `
 
 export const PopularActorSection = styled.section`

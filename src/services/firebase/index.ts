@@ -1,6 +1,7 @@
 import { addDoc, collection, deleteDoc, doc, getDocs, query, setDoc, where } from "firebase/firestore"; 
 import { db } from "../../../firebase.config";
 import { toastFailure, toastSuccess } from "../../shared/ui-kit/toast";
+import { todayDate } from "../../hooks/todayDate";
 
 export async function insertUsers(users: (string | null)[]) {
     try {
@@ -58,6 +59,11 @@ export async function insertPopularMovies(popularMovies: (string | null)[]) {
 }
 
 export async function insertMovies(movies: (string | null)[]) {
+
+    const today = todayDate();
+
+    console.log(today);
+
     try {
         await addDoc(collection(db, "movies"), {
             authuid: movies[0],
@@ -65,6 +71,7 @@ export async function insertMovies(movies: (string | null)[]) {
             impressionMovie: movies[2],
             movieIsFun: movies[3],
             movieIsRecom: movies[4],
+            todayDate: today,
         })
 
         toastSuccess("영화 등록했어요! 😂");
