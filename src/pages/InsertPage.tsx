@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { InsertSection, InsertArticle, InsertTitle, InsertCard, Insert, InsertContent } from "../app/styles";
+import { InsertArticle, InsertCard, Insert, InsertContent, Section, ChooseTitle } from "../app/styles";
 
 export function InsertPage() {
     return (
-        <InsertSection>
-            <InsertTitle>어떤 것을 등록하시겠습니까?</InsertTitle>
+        <Section>
+            <ChooseTitle>어떤 것을 등록하시겠습니까?</ChooseTitle>
             <InsertArticle>
                 <Link to="http://localhost:5173/insert/movie">
                     <InsertCard>
@@ -20,6 +20,6 @@ export function InsertPage() {
                     </InsertCard>
                 </Link>
             </InsertArticle>
-        </InsertSection>
+        </Section>
     )
 }
