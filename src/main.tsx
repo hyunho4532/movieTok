@@ -5,12 +5,15 @@ import { RouterProvider } from 'react-router-dom'
 import { router } from './app/router'
 import { QueryClientProvider } from 'react-query'
 import { queryClient } from './app/provider'
-import { JamSilFontStyle } from './shared/ui-kit/font'
+import { JalnanFontStyle, JamSilFontStyle, MangoFontStyle, SBFontStyle } from './shared/ui-kit/font'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
+      <SBFontStyle />
+      <MangoFontStyle />
       <JamSilFontStyle />
+      <JalnanFontStyle />
       <RouterProvider router={router} />
     </QueryClientProvider>
   </React.StrictMode>

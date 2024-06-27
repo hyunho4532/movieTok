@@ -42,6 +42,7 @@ export const PopularMovieTitle = styled.p`
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
+    font-family: 'JamsilBold', sans-serif;
 `
 
 export const PopularMovieFavorite = styled.p`
@@ -70,6 +71,7 @@ export const HeaderProfileCard = styled.div`
     padding-top: 8px;
     padding-left: 12px;
     cursor: pointer;
+    font-family: 'Mango', sans-serif;
 `
 
 export const DialogFix = styled.div`
@@ -164,6 +166,7 @@ export const HeaderItemTitle = styled.li`
     margin-right: 40px;
     cursor: pointer;
     transition: transform 0.7s;
+    font-family: 'SB', sans-serif;
     
     &:hover {
         transform: scale(1.5);
@@ -247,6 +250,12 @@ export const SelectSection = styled.section`
     margin: 0 auto;
 `
 
+export const Section = styled.section`
+    width: 820px;
+    height: 100%;
+    margin: 0 auto;
+`
+
 export const InsertSection = styled.section`
     width: 620px;
     height: 60px;
@@ -260,7 +269,6 @@ export const Title = styled.h1`
 `
 
 export const MovieContent = styled.div`
-    margin-top: 12px;
 `
 
 export const MovieStatus = styled.div`
@@ -272,9 +280,10 @@ export const MovieStatus = styled.div`
 
 export const MovieDate = styled.p`
     font-size: 12px;
-    text-align: center;
-    padding-top: 24px;
-    padding-right: 12px;
+    text-align: right;
+    padding-top: 30px;
+    padding-right: 26px;
+    font-family: 'Mango', sans-serif;
 `
 
 export const MovieTitle = styled.p`
@@ -341,6 +350,13 @@ export const InsertTitle = styled.h1`
     margin-top: 60px;
 `
 
+export const ChooseTitle = styled.h1`
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 60px;   
+`
+
 export const Input = styled.input`
     width: 420px;
     height: 40px;
@@ -388,6 +404,7 @@ export const Insert = styled.h1`
     padding-top: 12px;
     font-size: 18px;
     font-weight: bold;
+    font-family: 'JamsilBold', sans-serif;
 `
 
 export const InsertContent = styled.p`
