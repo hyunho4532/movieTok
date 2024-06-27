@@ -260,7 +260,14 @@ export const Title = styled.h1`
 `
 
 export const MovieContent = styled.div`
-    
+    margin-top: 12px;
+`
+
+export const MovieStatus = styled.div`
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 `
 
 export const MovieTitle = styled.p`
