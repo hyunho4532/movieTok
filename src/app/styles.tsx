@@ -269,9 +269,6 @@ export const Title = styled.h1`
     font-family: 'OneTitle', sans-serif !important;
 `
 
-export const MovieContent = styled.div`
-`
-
 export const MovieStatus = styled.div`
     width: 100%;
     display: flex;
@@ -291,6 +288,11 @@ export const MovieTitle = styled.p`
     padding-top: 16px;
     font-size: 16px;
     font-family: 'JamsilBold', sans-serif !important;
+`
+
+export const MovieContent = styled.p`
+    padding-top: 16px;
+    font-size: 28px;
 `
 
 export const PopularActorSection = styled.section`

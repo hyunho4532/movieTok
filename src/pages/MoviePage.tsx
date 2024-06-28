@@ -14,7 +14,7 @@ export function MoviePage() {
                 <Title>사람들이 추천한 영화들</Title>
                 <Grid>
                     { movieList?.map((movie, index) => (
-                        <Card key={index} className="w-[220px] h-[160px] mt-[32px]">
+                        <Card key={index} className="w-[220px] h-[170px] mt-[32px]">
                             <MovieTitle>
                                 { movie.title.length > 8 ? `${movie.title.substring(0, 16)}...` : `${movie.title}`}       
                             </MovieTitle>

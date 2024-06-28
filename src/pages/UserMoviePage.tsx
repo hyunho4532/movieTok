@@ -1,4 +1,4 @@
-import { Grid, Section, Title } from "../app/styles";
+import { Grid, MovieContent, MovieTitle, Section, Title } from "../app/styles";
 import { useLocalStorage } from "../hooks/useLocalStorage";
 import { getMoviesFromAuthUid } from "../services/firebase";
 import { Card } from "@mui/material";
@@ -18,7 +18,8 @@ export function UserMoviePage() {
                 <Grid>
                     { userMovieList?.map((movie: any, index: any) => (
                         <Card key={index} className="w-[280px] h-[140px] mt-8">
-                            <p>{movie.title}</p>
+                            <MovieTitle>{movie.title}</MovieTitle>
+                            <MovieContent>{movie.movieIsRecom}</MovieContent>
                         </Card>
                     ))}
                 </Grid>
