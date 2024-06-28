@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyChK99CVdRMxIeeFaUYNFtT2eI6ZLmcW5Y",
-  authDomain: "movie-a906a.firebaseapp.com",
-  projectId: "movie-a906a",
-  storageBucket: "movie-a906a.appspot.com",
-  messagingSenderId: "718971330609",
-  appId: "1:718971330609:web:a20351d790282f0153f510",
-  measurementId: "G-W0H1N6RZNR"
+  apiKey: "AIzaSyBI1yMfLOH9rbssJpidkIhCm3kJPqcwxLQ",
+  authDomain: "movietok-6b40a.firebaseapp.com",
+  projectId: "movietok-6b40a",
+  storageBucket: "movietok-6b40a.appspot.com",
+  messagingSenderId: "940143361481",
+  appId: "1:940143361481:web:35545e8efe294d5146fc18",
+  measurementId: "G-JDRB44DDXT"
 };
 
 const app = initializeApp(firebaseConfig);

@@ -26,6 +26,8 @@ export const discoverStore = create<Discover>((set) => ({
     setDiscoverList: (discoverList) => set({ discoverList }),
     movieList: null,
     setMovieList: (movieList) => set({ movieList }),
+    userMovieList: null,
+    setUserMovieList: (userMovieList) => set({ userMovieList }),
     discoverTitle: null,
     setDiscoverTitle: (discoverTitle: string) => set({ discoverTitle }),
     movieisFun: null,

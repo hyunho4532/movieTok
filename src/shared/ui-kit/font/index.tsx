@@ -35,3 +35,12 @@ export const JalnanFontStyle = createGlobalStyle`
     font-style: normal;
   }
 `
+
+export const OneFontStyle = createGlobalStyle`
+  @font-face {
+    font-family: 'OneTitle';
+    src: url('src/shared/ui-kit/font/one_title.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+`

@@ -5,6 +5,7 @@ import { PopularMovieDetailPage } from "../pages/movie/detail/PopularMovieDetail
 import { InsertPage } from "../pages/InsertPage";
 import { InsertMoviePage } from "../pages/movie/InsertMoviePage";
 import { MoviePage } from "../pages/MoviePage";
+import { UserMoviePage } from "../pages/UserMoviePage";
 
 export const router = createBrowserRouter ([
     {
@@ -30,5 +31,9 @@ export const router = createBrowserRouter ([
     {
         path: "/movie",
         element: <MoviePage />
+    },
+    {
+        path: "/users/movie",
+        element: <UserMoviePage />
     }
   ])

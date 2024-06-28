@@ -37,7 +37,9 @@ export function Header(props: HeaderProps) {
                             </HeaderProfileCard>
 
                             <HeaderProfileCard>
-                                <a href="">내 추천 영화 글 💡</a>
+                                <Link to="http://localhost:5173/users/movie">
+                                    내 추천 영화 글 💡
+                                </Link>
                             </HeaderProfileCard>
 
                             <HeaderProfileCard>

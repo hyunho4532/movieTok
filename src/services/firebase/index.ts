@@ -83,13 +83,33 @@ export async function insertMovies(movies: (string | null)[]) {
 }
 
 export async function getMovies(setMovie: any) {
-
     try {
         const querySnapshot = await getDocs(collection(db, "movies"));
         const movies: any[] = [];
 
         querySnapshot.forEach((doc) => {
             movies.push({ id: doc.id, ...doc.data() });
+        });
+
+        setMovie(movies);
+        
+    } catch (e) {
+        console.error(e);
+    }
+}
+
+export async function getMoviesFromAuthUid(setMovie: any, authuid: any) {
+    try {
+        const movieQuery = query (
+            collection(db, "movies"),
+            where("authuid", "==", authuid)
+        );
+
+        const querySnapshot = await getDocs(movieQuery);
+        const movies: any[] = [];
+        
+        querySnapshot.forEach((doc) => {
+            movies.push(doc.data());
         });
 
         setMovie(movies);
