@@ -3,6 +3,8 @@ export type Discover = {
     setDiscoverList: React.Dispatch<any>,
     movieList: any[] | null,
     setMovieList: React.Dispatch<any>,
+    userMovieList: any[] | null,
+    setUserMovieList: React.Dispatch<any>,
     discoverTitle: string | null,
     setDiscoverTitle: (title: string) => void,
     movieisFun: string | null,

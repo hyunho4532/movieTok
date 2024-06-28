@@ -42,7 +42,7 @@ export const PopularMovieTitle = styled.p`
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
-    font-family: 'JamsilBold', sans-serif;
+    font-family: 'JamsilBold', sans-serif !important;
 `
 
 export const PopularMovieFavorite = styled.p`
@@ -71,7 +71,7 @@ export const HeaderProfileCard = styled.div`
     padding-top: 8px;
     padding-left: 12px;
     cursor: pointer;
-    font-family: 'Mango', sans-serif;
+    font-family: 'Mango', sans-serif !important;
 `
 
 export const DialogFix = styled.div`
@@ -166,7 +166,7 @@ export const HeaderItemTitle = styled.li`
     margin-right: 40px;
     cursor: pointer;
     transition: transform 0.7s;
-    font-family: 'SB', sans-serif;
+    font-family: 'SB', sans-serif !important;
     
     &:hover {
         transform: scale(1.5);
@@ -266,6 +266,7 @@ export const Title = styled.h1`
     text-align: left;
     font-size: 20px;
     font-weight: bold;
+    font-family: 'OneTitle', sans-serif !important;
 `
 
 export const MovieContent = styled.div`
@@ -281,15 +282,15 @@ export const MovieStatus = styled.div`
 export const MovieDate = styled.p`
     font-size: 12px;
     text-align: right;
-    padding-top: 30px;
-    padding-right: 26px;
-    font-family: 'Mango', sans-serif;
+    padding-top: 42px;
+    padding-right: 12px;
+    font-family: 'Mango', sans-serif !important;
 `
 
 export const MovieTitle = styled.p`
     padding-top: 16px;
     font-size: 16px;
-    font-family: 'JamsilBold', sans-serif;
+    font-family: 'JamsilBold', sans-serif !important;
 `
 
 export const PopularActorSection = styled.section`
@@ -402,13 +403,16 @@ export const PaginationWrapper = styled.div`
 
 export const Insert = styled.h1`
     padding-top: 12px;
+    padding-left: 12px;
     font-size: 18px;
     font-weight: bold;
-    font-family: 'JamsilBold', sans-serif;
+    font-family: 'JamsilBold', sans-serif !important;
 `
 
 export const InsertContent = styled.p`
     padding-top: 8px;
+    padding-left: 12px;
+    font-family: 'Mango', sans-serif;
 `
 
 export const PopularActorArticle = styled.article`

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { discoverStore } from "../features/store";
 import { getMovies } from "../services/firebase";
 import { Card } from "@mui/material";
@@ -7,10 +6,7 @@ import { Grid, MovieContent, MovieDate, MovieStatus, MovieTitle, SelectSection, 
 export function MoviePage() {
 
     const { movieList, setMovieList } = discoverStore();
-
-    useEffect(() => {
-        getMovies(setMovieList);
-    })
+    getMovies(setMovieList);
 
     return (
         <>
@@ -18,7 +14,7 @@ export function MoviePage() {
                 <Title>사람들이 추천한 영화들</Title>
                 <Grid>
                     { movieList?.map((movie, index) => (
-                        <Card key={index} className="w-[220px] h-[140px] mt-[32px]">
+                        <Card key={index} className="w-[220px] h-[160px] mt-[32px]">
                             <MovieTitle>
                                 { movie.title.length > 8 ? `${movie.title.substring(0, 16)}...` : `${movie.title}`}       
                             </MovieTitle>
@@ -29,7 +25,7 @@ export function MoviePage() {
                                 </MovieStatus>
 
                                 <MovieDate>
-                                    등록한 날짜: { movie.todayDate }
+                                    날짜: { movie.todayDate }
                                 </MovieDate>
                             </MovieContent>
                         
