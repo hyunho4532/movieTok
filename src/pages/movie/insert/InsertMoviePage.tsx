@@ -1,12 +1,12 @@
 import { Button } from "@headlessui/react";
-import { Article, Div, Group, Input, InsertSection, InsertTitle, Spacer } from "../../app/styles";
-import { dialogStore, discoverStore } from "../../features/store";
-import { MovieDialog } from "../../components/dialog/MovieDialog";
+import { Article, Div, Group, Input, InsertSection, InsertTitle, Spacer } from "../../../app/styles";
+import { dialogStore, discoverStore } from "../../../features/store";
+import { MovieDialog } from "../../../components/dialog/MovieDialog";
 import { Editor } from '@toast-ui/react-editor';
 import '@toast-ui/editor/dist/toastui-editor.css';
-import { MovieButton } from "../../shared/ui-kit/button";
+import { MovieButton } from "../../../shared/ui-kit/button";
 import { createRef } from "react";
-import { CustomSelect } from "../../shared/ui-kit/select";
+import { CustomSelect } from "../../../shared/ui-kit/select";
 
 export function InsertMoviePage() {
 

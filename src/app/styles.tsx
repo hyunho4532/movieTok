@@ -244,6 +244,12 @@ export const PopularMovieSection = styled.section`
     margin-top: 120px;
 `
 
+export const UserMovieSection = styled.section`
+    width: 880px;
+    height: 60px;
+    margin-top: 220px;
+`
+
 export const SelectSection = styled.section`
     width: 820px;
     height: 60px;
@@ -325,6 +331,10 @@ export const PopularMovieDetailActorSection = styled.section`
 `
 
 export const PopularMovieArticle = styled.article`
+
+`
+
+export const UserMovieArticle = styled.article`
 
 `
 

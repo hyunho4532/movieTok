@@ -1,9 +1,16 @@
 import { Header } from "../components/header/Header";
 import { popularActorData, popularMovieData } from "../entities/movie/getter";
+import { discoverStore } from "../features/store";
+import { getMovies } from "../services/firebase";
 import { PopularActorPage } from "./actor/PopularActorPage";
 import { PopularMoviePage } from "./movie/PopularMoviePage";
+import { UserMoviePage } from "./movie/UserMoviePage";
 
 export function MainPage() {
+
+    const { movieList, setMovieList } = discoverStore();
+    getMovies(setMovieList)
+
     return (
         <>
             <Header
@@ -16,6 +23,9 @@ export function MainPage() {
 
             <PopularActorPage
                 popularActor={popularActorData} />
+
+            <UserMoviePage
+                userMovie={movieList!} />
         </>
     )
 }
