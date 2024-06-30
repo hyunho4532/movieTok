@@ -46,7 +46,7 @@ export const PopularMovieTitle = styled.p`
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
-    font-family: 'JamsilBold', sans-serif !important;
+    font-family: 'yg-jalnan', sans-serif !important;
 `
 
 export const UserMovieTitle = styled.p`
@@ -54,7 +54,7 @@ export const UserMovieTitle = styled.p`
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
-    font-family: 'JamsilBold', sans-serif !important;
+    font-family: 'yg-jalnan', sans-serif !important;
 `
 
 export const PopularMovieFavorite = styled.p`
@@ -83,7 +83,7 @@ export const HeaderProfileCard = styled.div`
     padding-top: 8px;
     padding-left: 12px;
     cursor: pointer;
-    font-family: 'Mango', sans-serif !important;
+    font-family: 'ONE-Mobile-POP', sans-serif !important;
 `
 
 export const DialogFix = styled.div`
@@ -178,7 +178,7 @@ export const HeaderItemTitle = styled.li`
     margin-right: 40px;
     cursor: pointer;
     transition: transform 0.7s;
-    font-family: 'SB', sans-serif !important;
+    font-family: 'SBAggroB', sans-serif !important;
     
     &:hover {
         transform: scale(1.5);
@@ -442,13 +442,13 @@ export const Insert = styled.h1`
     padding-left: 12px;
     font-size: 18px;
     font-weight: bold;
-    font-family: 'JamsilBold', sans-serif !important;
+    font-family: 'GangwonEduPowerExtraBoldA', sans-serif !important;
 `
 
 export const InsertContent = styled.p`
     padding-top: 8px;
     padding-left: 12px;
-    font-family: 'Mango', sans-serif;
+    font-family: 'GongGothicMedium', sans-serif;
 `
 
 export const PopularActorArticle = styled.article`

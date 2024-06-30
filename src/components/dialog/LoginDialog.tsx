@@ -17,13 +17,13 @@ export function LoginDialog(isOpen: any) {
                     <DialogAuthLogins>
                         <DialogAuthLogin>
                             <Card className="w-[340px] h-[60px] flex">
-                                <DialogAuthLoginImage src="dist\google_logo.png" />
+                                <DialogAuthLoginImage src="https://movietok.vercel.app/google_logo.png" />
                                 <DialogAuthLoginTitle onClick={() => googleLoginSetUp()}>구글 로그인으로 시작하기</DialogAuthLoginTitle>
                             </Card>
                         </DialogAuthLogin>
                         <DialogAuthLogin>
                             <Card className="w-[340px] h-[60px] flex">
-                                <DialogAuthLoginImage src="dist\kakao_logo.png" />
+                                <DialogAuthLoginImage src="https://movietok.vercel.app/kakao_logo.png" />
                                 <DialogAuthLoginTitle>카카오 로그인으로 시작하기</DialogAuthLoginTitle>
                             </Card>
                         </DialogAuthLogin>

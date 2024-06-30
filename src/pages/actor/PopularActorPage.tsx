@@ -11,8 +11,6 @@ export function PopularActorPage(props: PopularActorProps) {
         props.popularActor.then(data => {
             setPopularActors(data);
         })
-
-        console.log(props.popularActor);
     })
 
     return (

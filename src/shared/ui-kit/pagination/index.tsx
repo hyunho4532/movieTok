@@ -9,6 +9,7 @@ export function CustomPagination(props: PaginationProps) {
     const { selectedGenre } = genreStore();
 
     const handlePageChange = (event: any, value: any) => {
+        console.log(event);
         setCurrentPage(value);
         fetchMovies(props.setDiscoverList, props.setTotalMovies, selectedGenre, value);
     }

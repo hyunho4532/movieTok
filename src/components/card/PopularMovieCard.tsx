@@ -28,7 +28,7 @@ export function PopularMovieCard({ movie }: PopularMovieCardProps) {
                 </PopularMovieFavorite>
             </PopularMovieCardFix>
     
-            <Link to={`http://localhost:5173/popular/movie/detail/${movie.id}`}>
+            <Link to={`/popular/movie/detail/${movie.id}`}>
                 <PopularMovieId>{movie.id}</PopularMovieId>
                 <PopularMovieImage src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} />
             </Link>

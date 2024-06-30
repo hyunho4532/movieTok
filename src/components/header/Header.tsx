@@ -15,12 +15,12 @@ export function Header(props: HeaderProps) {
     return (
         <HeaderSize>
             <HeaderFix>
-                <HeaderIcon src="public\movietok_logo.jpg" width='120' height='120' />
-                <Link to="http://localhost:5173/movie">
+                <HeaderIcon src="https://movietok.vercel.app/movietok_logo.jpg" width='120' height='120' />
+                <Link to="/movie">
                     <HeaderItem>{props.headerRecommendMovie}</HeaderItem>
                 </Link>
                 
-                <Link to="http://localhost:5173/insert">
+                <Link to="/insert">
                     <HeaderItem>{props.headerMovieInsert}</HeaderItem>
                 </Link>
 
@@ -37,7 +37,7 @@ export function Header(props: HeaderProps) {
                             </HeaderProfileCard>
 
                             <HeaderProfileCard>
-                                <Link to="http://localhost:5173/users/movie">
+                                <Link to="/users/movie">
                                     내 추천 영화 글 💡
                                 </Link>
                             </HeaderProfileCard>
