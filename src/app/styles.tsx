@@ -37,7 +37,19 @@ export const PopularMovieCardFix = styled.div`
     display: flex;
 `
 
+export const UserMovieCardFix = styled.div`
+    display: flex;
+`
+
 export const PopularMovieTitle = styled.p`
+    text-align: start;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: 'JamsilBold', sans-serif !important;
+`
+
+export const UserMovieTitle = styled.p`
     text-align: start;
     padding-top: 8px;
     padding-left: 8px;
@@ -179,6 +191,11 @@ export const PopularMovieItem = styled.div`
     margin-left: 340px;
 `
 
+export const UserMovieItem = styled.div`
+    overflow-x: scroll;
+    margin-left: 340px;
+`
+
 export const PopularActorItem = styled.div`
     overflow-x: scroll;
     margin-left: 340px;
@@ -195,6 +212,13 @@ export const PopularVideoDetailItem = styled.div`
 export const PopularMovieItemFix = styled.div`
     width: 4800px;
     height: 380px;
+    display: flex;
+    margin-top: 16px;
+`
+
+export const UserMovieItemFix = styled.div`
+    width: 4800px;
+    height: 80px;
     display: flex;
     margin-top: 16px;
 `
@@ -242,6 +266,12 @@ export const PopularMovieSection = styled.section`
     width: 880px;
     height: 60px;
     margin-top: 120px;
+`
+
+export const UserMovieSection = styled.section`
+    width: 880px;
+    height: 60px;
+    margin-top: 220px;
 `
 
 export const SelectSection = styled.section`
@@ -325,6 +355,10 @@ export const PopularMovieDetailActorSection = styled.section`
 `
 
 export const PopularMovieArticle = styled.article`
+
+`
+
+export const UserMovieArticle = styled.article`
 
 `
 
@@ -476,6 +510,27 @@ export const PopularMovieDetailActors = styled.p`
     font-weight: bold;
     margin-top: 80px;
     text-align: left;
+`
+
+export const UserMoviesCard = styled.div`
+    width: 220px;
+    height: 60px;
+    border-radius: 1.5rem;
+    border: 2px solid grey;
+    margin-right: 20px;
+    transition: transform 0.3s;
+
+    &:hover {
+        transform: scale(1.04);
+    }
+`
+
+export const UserMovieAside = styled.aside`
+    order: -1;  
+    width: 25%;
+    padding: 1rem;
+    background-color: #f0f0f0;
+    box-sizing: border-box;
 `
 
 export const PopularMoviesCard = styled.div`

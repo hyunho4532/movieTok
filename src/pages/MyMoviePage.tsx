@@ -4,7 +4,7 @@ import { getMoviesFromAuthUid } from "../services/firebase";
 import { Card } from "@mui/material";
 import { discoverStore } from "../features/store";
 
-export function UserMoviePage() {
+export function MyMoviePage() {
 
     const authuid = useLocalStorage("userData").getItem(0);
     const { userMovieList, setUserMovieList } = discoverStore();
