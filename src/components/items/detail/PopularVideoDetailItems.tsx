@@ -3,7 +3,7 @@
 import { Card } from "@mui/material";
 import { PopularVideoDetailItem, PopularVideoDetailItemFix, YoutubeComponent } from "../../../app/styles";
 import YouTube from "react-youtube";
-import { PopularItemsProps } from "../props/PopularItemsProps";
+import { PopularItemsProps } from "../PopularActorItems";
 
 export function PopularVideoDetailItems(props: PopularItemsProps) {
 

@@ -1,6 +1,9 @@
 import { PopularMovieCard } from "../card/PopularMovieCard";
 import { PopularMovieItem, PopularMovieItemFix } from "../../app/styles";
-import { PopularItemsProps } from "./props/PopularItemsProps";
+
+export interface PopularItemsProps  {
+    popularData: any[]
+}
 
 export function PopularMovieItems(props: PopularItemsProps) {
     return (

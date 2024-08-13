@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/no-unsafe-member-access */
 import { PopularActorDetailCard, PopularActorDetailImage, PopularActorDetailItem, PopularActorDetailItemFix } from "../../../app/styles";
-import { PopularItemsProps } from "../props/PopularItemsProps";
+import { PopularItemsProps } from "../PopularActorItems";
 
 export function PopularActorDetailItems(props: PopularItemsProps) {
     return (

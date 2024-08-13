@@ -35,7 +35,9 @@ export const discoverStore = create<Discover>((set) => ({
     impressionMovie: null,
     setImpressionMovie: (impressionMovie: string) => set({ impressionMovie }),
     movieIsRecom: null,
-    setMovieIsRecom: (movieIsRecom: string) => set({movieIsRecom})
+    setMovieIsRecom: (movieIsRecom: string) => set({movieIsRecom}),
+    id: 0,
+    title: "",
 }));
 
 export const genreStore = create<Genre>((set) => ({

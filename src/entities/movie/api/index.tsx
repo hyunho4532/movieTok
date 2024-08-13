@@ -1,5 +1,24 @@
 import { AxiosInstance } from "../../../shared/axios";
 
+export const getTrendingMovies = async (): Promise<any[]> => {
+
+    const axiosInstance = AxiosInstance('trending');
+
+    try {
+        const response = await axiosInstance.get('/movie/day?language=ko-KR');
+
+        if (!response) {
+            throw new Error('Network response was not ok');
+        }
+
+        return response.data.results;
+        
+    } catch (err) {
+        console.error('Fetch error:', err);
+        return [];
+    }
+}
+
 export const getPopularMovies = async (): Promise<any[]> => {
 
     const axiosInstance = AxiosInstance('movie');
