@@ -2,11 +2,10 @@ import { AxiosInstance } from "../../../shared/axios";
 
 export const getTrendingMovies = async (): Promise<any[]> => {
 
-    const axiosInstance = AxiosInstance('movie');
-
+    const axiosInstance = AxiosInstance('trending');
 
     try {
-        const response = await axiosInstance.get('/popular?language=ko-KR&page=1');
+        const response = await axiosInstance.get('/movie/day?language=ko-KR');
 
         if (!response) {
             throw new Error('Network response was not ok');

@@ -1,13 +1,22 @@
-import { PopularMovieCardFix, PopularMovieTitle, PopularMoviesCard } from "../../app/styles";
-import { TrendingMovieCardProps } from "./props/TrendingMovieCardProps";
+import { TrendingMovieCardFix, TrendingMovieImage, TrendingMoviesCard, TrendingMovieTitle } from "../../app/styles";
+
+export interface TrendingMovieCardProps {
+    movie: {
+        id: number;
+        title: string;
+        poster_path: string;
+    };
+}
 
 export function TrendingMovieCard({ movie }: TrendingMovieCardProps) {
 
     return (
-        <PopularMoviesCard>
-            <PopularMovieCardFix>
-                <PopularMovieTitle>{movie.title}</PopularMovieTitle>
-            </PopularMovieCardFix>
-        </PopularMoviesCard>
+        <TrendingMoviesCard>
+            <TrendingMovieCardFix>
+                <TrendingMovieTitle>{movie.title}</TrendingMovieTitle>
+            </TrendingMovieCardFix>
+
+            <TrendingMovieImage src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`} />
+        </TrendingMoviesCard>
     );
 }

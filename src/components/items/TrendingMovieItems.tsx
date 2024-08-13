@@ -10,7 +10,8 @@ export function TrendingMovieItems(props: TrendingMovieItemsProps) {
         <TrendingMovieItem>
             <TrendingMovieItemFix>
                 { props.trendingMovieData.map((movie: any, index: number) => {
-                    return <TrendingMovieCard movie={movie} />
+                    const movieTitle = movie.title.length > 13 ? `${movie.title.substring(0, 13)}...` : movie.title
+                    return <TrendingMovieCard key={index} movie={{ ...movie, title: movieTitle }} />
                 })}
             </TrendingMovieItemFix>
         </TrendingMovieItem>

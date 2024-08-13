@@ -37,11 +37,23 @@ export const PopularMovieCardFix = styled.div`
     display: flex;
 `
 
+export const TrendingMovieCardFix = styled.div`
+    display: flex;
+`
+
 export const UserMovieCardFix = styled.div`
     display: flex;
 `
 
 export const PopularMovieTitle = styled.p`
+    text-align: start;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: 'yg-jalnan', sans-serif !important;
+`
+
+export const TrendingMovieTitle = styled.p`
     text-align: start;
     padding-top: 8px;
     padding-left: 8px;
@@ -67,6 +79,11 @@ export const PopularMovieId = styled.p`
 `
 
 export const PopularMovieImage = styled.img`
+    width: 300px;
+    height: 300px;
+`
+
+export const TrendingMovieImage = styled.img`
     width: 300px;
     height: 300px;
 `
@@ -560,6 +577,16 @@ export const UserMovieAside = styled.aside`
 `
 
 export const PopularMoviesCard = styled.div`
+    border-radius: 1.5rem;
+    margin-right: 20px;
+    transition: transform 0.3s;
+    
+    &:hover {
+        transform: scale(1.04);
+    }
+`
+
+export const TrendingMoviesCard = styled.div`
     border-radius: 1.5rem;
     margin-right: 20px;
     transition: transform 0.3s;

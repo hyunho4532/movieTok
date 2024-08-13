@@ -2,7 +2,8 @@ export const TMDB_BASE_URL = (type: string) =>
     type === 'movie' ? "https://api.themoviedb.org/3/movie" : 
     type === 'actor' ? "https://api.themoviedb.org/3/person" : 
     type === 'genre' ? "https://api.themoviedb.org/3/genre" :
-    "https://api.themoviedb.org/3/discover"
+    type === 'discover' ? "https://api.themoviedb.org/3/discover" 
+                        : "https://api.themoviedb.org/3/trending/"
     
 export const SERVER_BASE_URL = "http://localhost:3000";
 
