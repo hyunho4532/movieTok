@@ -269,9 +269,14 @@ export const PopularMovieSection = styled.section`
 `
 
 export const SuggestMovieSection = styled.section`
+    width: 420px;
+    height: 60px;
+    margin: 60px auto 0 auto;
+`
+
+export const SuggestMovieSections = styled.section`
     width: 880px;
     height: 60px;
-    margin-top: 80px;
 `
 
 export const UserMovieSection = styled.section`

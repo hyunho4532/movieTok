@@ -1,6 +1,15 @@
-import { getPopularActors, getPopularMovies } from "./api";
+import { getPopularActors, getPopularMovies, getTrendingMovies } from "./api";
 
 export const popularMovieData = getPopularMovies()
+    .then(data => {
+        return data
+    })
+    .catch(error => {
+        return error;
+    })
+
+
+export const trendingMovieData = getTrendingMovies()
     .then(data => {
         return data
     })

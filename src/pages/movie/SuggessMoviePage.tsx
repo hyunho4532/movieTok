@@ -1,24 +1,27 @@
-import { SuggestMovieArticle, SuggestMovieSection } from "../../app/styles";
-import { movieKeywords } from "../../constants/const/const";
+import { useEffect, useState } from "react";
+import { SuggestMovieArticle, SuggestMovieSections } from "../../app/styles";
+import { TrendingMovieItems } from "../../components/items/TrendingMovieItems";
+import { trendingMovieData } from "../../entities/movie/getter";
 
 
 export function SuggestMoviePage() {
 
+    const [trendingMovies, setTrendingMovies] = useState<any[]>([]);
+
+    useEffect(() => {
+        trendingMovieData.then(data => {
+            setTrendingMovies(data);
+        })
+    })
+
     return (
         <>
-            <SuggestMovieSection>
+            <SuggestMovieSections>
                 <SuggestMovieArticle>
-                    <h1 className="text-center text-xl font-bold">원하시는 영화를 추천해드립니다.</h1>
-
-                    <h2 className="text-center text-xl pt-20">1. 원하시는 장르를 선택해주세요!</h2>
-
-                    <select className="">
-                        { movieKeywords.map((data: any, key: number) => (
-                            <option>{data.title}</option>
-                        ))}
-                    </select>
+                    <h1 className="text-center text-xl font-bold">오늘 핫한 영화들을 조회해봤어요!</h1>
+                    <TrendingMovieItems trendingMovieData={trendingMovies} />
                 </SuggestMovieArticle>
-            </SuggestMovieSection>
+            </SuggestMovieSections>
         </>
     )
 }
