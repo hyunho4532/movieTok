@@ -1,7 +1,10 @@
-import { PopularMovieProps } from "./props/PopularMovieProps";
 import { PopularMovieItems } from "../../components/items/PopularMovieItems";
 import { useEffect, useState } from "react";
 import { PopularMovieArticle, PopularMovieSection } from "../../app/styles";
+
+export interface PopularMovieProps {
+    popularMovie: Promise<any[]>
+}
 
 export function PopularMoviePage(props: PopularMovieProps) {
 

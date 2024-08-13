@@ -1,6 +1,9 @@
 import { UserMovieArticle, UserMovieSection } from "../../app/styles";
-import { UserMovieProps } from "./props/UserMovieProps";
 import { UserMovieItems } from "../../components/items/UserMovieItems";
+
+export interface UserMovieProps {
+    userMovie: any[]
+}
 
 export function UserMoviePage({userMovie}: UserMovieProps) {
     return (

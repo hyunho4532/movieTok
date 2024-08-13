@@ -2,7 +2,10 @@ import { HeaderItemTitle } from "../../app/styles";
 import { LoginDialog } from "../dialog/LoginDialog";
 import { LoginInfoDialog } from "../dialog/LoginInfoDialog";
 import { useHeaderItemHooks } from "./hooks/HeaderItemHooks";
-import { HeaderItemProps } from "./props/HeaderItemProps";
+
+export interface HeaderItemProps {
+    children?: React.ReactNode
+}
 
 export function HeaderItem({children}: HeaderItemProps) {
 

@@ -3,10 +3,15 @@ import { HeaderFix, HeaderProfileCard, HeaderProfileImage, HeaderSize } from "..
 import { useLocalStorage } from "../../hooks/useLocalStorage";
 import { HeaderIcon } from "./HeaderIcon";
 import { HeaderItem } from "./HeaderItem";
-import { HeaderProps } from "./props/HeaderProps";
 import { ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { Link } from "react-router-dom";
+
+export interface HeaderProps {
+    headerRecommendMovie: string,
+    headerMovieInsert: string,
+    headerLogin: string,
+}
 
 export function Header(props: HeaderProps) {
 
