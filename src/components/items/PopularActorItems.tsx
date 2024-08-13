@@ -3,7 +3,10 @@
 import { PopularActorDetailImage, PopularActorDetailName, PopularActorItem, PopularActorItemFix, PopularActorsCard, PopularMovieCardContianer } from "../../app/styles";
 import { PopularMovieCardBack } from "../../app/styles/back";
 import { PopularMovieCardFront } from "../../app/styles/front";
-import { PopularItemsProps } from "./props/PopularItemsProps";
+
+export interface PopularItemsProps  {
+    popularData: any[]
+}
 
 export function PopularActorItems(props: PopularItemsProps) {
 

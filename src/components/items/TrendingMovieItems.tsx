@@ -1,14 +1,18 @@
+import { TrendingMovieItem, TrendingMovieItemFix } from "../../app/styles";
+import { TrendingMovieCard } from "../card/TrendingMovieCard";
+
+interface TrendingMovieItemsProps {
+    trendingMovieData: any[];
+}
+
 export function TrendingMovieItems(props: TrendingMovieItemsProps) {
-
-    console.log(props.trendingMovieData);
-
     return (
-        <>
-            {
-                props.trendingMovieData.map((movie: any, index: number) => (
-                    <p key={index}>{movie.title}</p>
-                ))
-            }
-        </>
+        <TrendingMovieItem>
+            <TrendingMovieItemFix>
+                { props.trendingMovieData.map((movie: any, index: number) => {
+                    return <TrendingMovieCard movie={movie} />
+                })}
+            </TrendingMovieItemFix>
+        </TrendingMovieItem>
     )
 }

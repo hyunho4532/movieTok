@@ -1,6 +1,9 @@
 import { UserMovieItem, UserMovieItemFix } from "../../app/styles";
 import { UserMovieCard } from "../card/UserMovieCard";
-import { UserMovieItemsProps } from "./props/UserMovieItemsProps";
+
+export interface UserMovieItemsProps {
+    userMovieData: any[]
+}
 
 export function UserMovieItems(props: UserMovieItemsProps) {
 

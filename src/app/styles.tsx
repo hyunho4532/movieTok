@@ -191,6 +191,11 @@ export const PopularMovieItem = styled.div`
     margin-left: 340px;
 `
 
+export const TrendingMovieItem = styled.div`
+    overflow-x: scroll;
+    margin-left: 290px;
+`
+
 export const UserMovieItem = styled.div`
     overflow-x: scroll;
     margin-left: 340px;
@@ -210,6 +215,13 @@ export const PopularVideoDetailItem = styled.div`
 `
 
 export const PopularMovieItemFix = styled.div`
+    width: 4800px;
+    height: 380px;
+    display: flex;
+    margin-top: 16px;
+`
+
+export const TrendingMovieItemFix = styled.div`
     width: 4800px;
     height: 380px;
     display: flex;

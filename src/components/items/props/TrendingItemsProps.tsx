@@ -1,3 +1,0 @@
-interface TrendingMovieItemsProps {
-    trendingMovieData: any[];
-  }
