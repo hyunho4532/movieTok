@@ -6,6 +6,7 @@ import { InsertPage } from "../pages/InsertPage";
 import { InsertMoviePage } from "../pages/movie/insert/InsertMoviePage";
 import { MoviePage } from "../pages/MoviePage";
 import { MyMoviePage } from "../pages/MyMoviePage";
+import { SuggestMoviePage } from "../pages/movie/SuggessMoviePage";
 
 export const router = createBrowserRouter ([
     {
@@ -35,5 +36,9 @@ export const router = createBrowserRouter ([
     {
         path: "/users/movie",
         element: <MyMoviePage />
+    },
+    {
+        path: "/movie/suggest",
+        element: <SuggestMoviePage />
     }
   ])

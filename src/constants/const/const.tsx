@@ -18,9 +18,33 @@ export const MOVIE_CATEGORY_LIST = ["액션", "코미디", "드라마", "로맨�
 export const MOVIE_PLATFORM_LIST = ["넷플릭스", "Disney+", "왓챠", "티빙"]
 export const MOVIE_STATUS_LIST = ["좋아하는 편", "보통", "싫어하는 편"]
 
-export const movies = [
-    { name: "Inception", weight: 3 },
-    { name: "Interstellar", weight: 2 },
-    { name: "The Dark Knight", weight: 4 },
-    { name: "Tenet", weight: 1 },
-  ];
+export const movieKeywords = [
+    {
+        key: 1,
+        title: '액션'
+    },
+    {
+        key: 2,
+        title: '코미디'
+    },
+    {
+        key: 3,
+        title: '드라마'
+    },
+    {
+        key: 4,
+        title: '로맨스'
+    },
+    {
+        key: 5,
+        title: '스릴러'
+    },
+    {
+        key: 6,
+        title: '공포'
+    },
+    {
+        key: 7,
+        title: '애니메이션'
+    }
+];

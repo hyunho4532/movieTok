@@ -56,11 +56,9 @@ export const paginationStore = create<Pagination>((set) => ({
 
 export const dialogStore = create<Dialog>((set) => ({
     isOpen: false,
-    isRouletteOpen: false,
     isInfoOpen: false,
 
     setIsOpen: (isOpen: boolean) => set({ isOpen }),
-    setIsRouletteOpen: (isRouletteOpen: boolean) => set({ isRouletteOpen }),
     setIsInfoOpen: (isInfoOpen: boolean) => set({ isInfoOpen })
 }));
 
