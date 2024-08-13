@@ -365,7 +365,6 @@ export const PopularMovieArticle = styled.article`
 `
 
 export const SuggestMovieArticle = styled.article`
-
 `
 
 export const UserMovieArticle = styled.article`

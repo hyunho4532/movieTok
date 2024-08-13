@@ -17,3 +17,10 @@ export const GOOGLE_REDIRECT_URL = `https://accounts.google.com/o/oauth2/auth?cl
 export const MOVIE_CATEGORY_LIST = ["액션", "코미디", "드라마", "로맨스", "스릴러", "기타"]
 export const MOVIE_PLATFORM_LIST = ["넷플릭스", "Disney+", "왓챠", "티빙"]
 export const MOVIE_STATUS_LIST = ["좋아하는 편", "보통", "싫어하는 편"]
+
+export const movies = [
+    { name: "Inception", weight: 3 },
+    { name: "Interstellar", weight: 2 },
+    { name: "The Dark Knight", weight: 4 },
+    { name: "Tenet", weight: 1 },
+  ];
