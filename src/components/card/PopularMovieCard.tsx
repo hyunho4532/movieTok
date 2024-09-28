@@ -1,10 +1,17 @@
 
 import { Link } from "react-router-dom";
 import { PopularMovieCardFix, PopularMovieFavorite, PopularMovieId, PopularMovieImage, PopularMovieTitle, PopularMoviesCard } from "../../app/styles";
-import { PopularMovieCardProps } from "./props/PopularMovieCardProps";
 import { useState } from "react";
 import { insertPopularMovies } from "../../services/firebase";
 import { useLocalStorage } from "../../hooks/useLocalStorage";
+
+export interface PopularMovieCardProps {
+    movie: {
+        id: number;
+        title: string;
+        poster_path: string;
+    };
+}
 
 export function PopularMovieCard({ movie }: PopularMovieCardProps) {
 

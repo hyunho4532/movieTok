@@ -3,7 +3,7 @@ import { SERVER_BASE_URL, TMDB_API_KEY, TMDB_BASE_URL } from "../../constants/co
 
 export const AxiosInstance = (type: string) => {
     const instance = axios.create({
-        baseURL: type === 'movie' || type === 'actor' || type === 'genre' || type === 'discover' ? TMDB_BASE_URL(type) : SERVER_BASE_URL,
+        baseURL: type === 'movie' || type === 'actor' || type === 'genre' || type === 'discover' || type === 'search' ? TMDB_BASE_URL(type) : SERVER_BASE_URL,
         headers: {
             Accept: 'application/json',
             Authorization: `Bearer ${TMDB_API_KEY}`
