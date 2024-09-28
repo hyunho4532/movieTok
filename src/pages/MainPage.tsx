@@ -3,7 +3,8 @@ import { popularActorData, popularMovieData } from "../entities/movie/getter";
 import { discoverStore } from "../features/store";
 import { getMovies } from "../services/firebase";
 import { PopularActorPage } from "./actor/PopularActorPage";
-import { PopularMoviePage } from "./movie/PopularMoviePage";
+import { PopularMoviePage } from "./movie/popular/PopularMoviePage";
+import { RecommandMoviePage } from "./movie/recommand/RecommandMoviePage";
 import { UserMoviePage } from "./movie/UserMoviePage";
 
 export function MainPage() {
@@ -17,6 +18,8 @@ export function MainPage() {
                 headerRecommendMovie="추천 영화"
                 headerMovieInsert="등록"
                 headerLogin="로그인" />
+
+            <RecommandMoviePage />
 
             <PopularMoviePage
                 popularMovie={popularMovieData} />

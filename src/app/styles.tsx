@@ -262,6 +262,12 @@ export const PopularMovieDetailOverlay = styled.div`
     box-sizing: border-box;
 `
 
+export const RecommandMovieSection = styled.section`
+    width: 880px;
+    height: 60px;
+    margin-top: 60px;
+`
+
 export const PopularMovieSection = styled.section`
     width: 880px;
     height: 60px;
