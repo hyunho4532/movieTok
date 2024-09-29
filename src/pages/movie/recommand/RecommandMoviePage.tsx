@@ -10,12 +10,14 @@ export function RecommandMoviePage() {
     const [recommandMovie, setRecommandMovie] = useState<any[]>([]);
 
     const movieInputChange = (event: any) => {
-        if (event.target.value.length === 0) {
+        
+        console.log(event.target.value.length);
+
+        if (event.target.value.length === 0 && event.target.value === "") {
             setRecommandMovie([]);
-            return;
         }
 
-        AxiosInstance("search").get(`/movie?query=${event.target.value}&include_adult=false&language=en-US&page=1`)
+        AxiosInstance("search").get(`/movie?query=${event.target.value}&include_adult=false&language=ko-KR&page=1`)
             .then(response => {
                 setRecommandMovie(response.data.results);
             })
@@ -26,14 +28,16 @@ export function RecommandMoviePage() {
             <RecommandMovieArticle>
                 <div style={{ margin: "0 auto" }}>
                     <Input
-                        width="540px" 
+                        width="620px" 
                         height="42px" 
                         radius="16px" 
                         placeholder="영화 이름을 입력하세요!"
                         onChange={(movie) => movieInputChange(movie)} />
                 </div>
 
-                <RecommandMovieItems recommandMovieData={recommandMovie} />
+                { recommandMovie.length === 0 ? 
+                    <p style={{ marginTop: "40px", fontWeight: "bold" }}>조회된 영화 내역이 없습니다.</p> 
+                    : <RecommandMovieItems recommandMovieData={recommandMovie} /> }
 
             </RecommandMovieArticle>
         </RecommandMovieSection>

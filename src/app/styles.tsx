@@ -39,6 +39,7 @@ export const PopularMovieCardFix = styled.div`
 
 export const CardFix = styled.div`
     width: 240px;
+    height: 40px;
 `
 
 export const UserMovieCardFix = styled.div`
@@ -193,7 +194,7 @@ export const DialogAuthLoginTitle = styled.p`
 
 export const HeaderItemTitle = styled.li`
     width: 70px;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
     transition: transform 0.7s;
     font-family: 'SBAggroB', sans-serif !important;
@@ -210,7 +211,8 @@ export const PopularMovieItem = styled.div`
 `
 
 export const RecommandMovieItem = styled.div`
-    width: 540px;
+    width: 520px;
+    height: 270px;
     overflow-x: scroll;
     margin: 0 auto;
 `
@@ -294,19 +296,19 @@ export const PopularMovieDetailOverlay = styled.div`
 `
 
 export const RecommandMovieSection = styled.section`
-    width: 1200px;
+    width: 1320px;
     height: 60px;
-    margin-top: 120px;
+    margin-top: 60px;
 `
 
 export const PopularMovieSection = styled.section`
-    width: 880px;
+    width: 1000px;
     height: 60px;
-    margin-top: 360px;
+    margin-top: 300px;
 `
 
 export const UserMovieSection = styled.section`
-    width: 880px;
+    width: 1000px;
     height: 60px;
     margin-top: 220px;
 `
@@ -363,7 +365,7 @@ export const MovieContent = styled.p`
 `
 
 export const PopularActorSection = styled.section`
-    width: 880px;
+    width: 1000px;
     height: 60px;
     margin-top: 440px;
 `

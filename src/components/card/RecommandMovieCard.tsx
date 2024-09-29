@@ -12,7 +12,7 @@ export function RecommandMovieCard({ recommandMovieData }: RecommandMovieCardPro
         <RecommandMoviesCard>
             <CardFix>
                 <RecommandMovieTitle>
-                    {recommandMovieData.title}
+                    { recommandMovieData.title.length > 14 ? `${recommandMovieData.title.substring(0, 14)}...` : recommandMovieData.title }
                 </RecommandMovieTitle>
 
                 <RecommandMovieImg src={`http://image.tmdb.org/t/p/w500/${recommandMovieData.backdrop_path}`} />
