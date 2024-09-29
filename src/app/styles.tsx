@@ -37,6 +37,11 @@ export const PopularMovieCardFix = styled.div`
     display: flex;
 `
 
+export const CardFix = styled.div`
+    width: 240px;
+    height: 40px;
+`
+
 export const UserMovieCardFix = styled.div`
     display: flex;
 `
@@ -46,7 +51,21 @@ export const PopularMovieTitle = styled.p`
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
-    font-family: 'JamsilBold', sans-serif !important;
+    font-family: 'yg-jalnan', sans-serif !important;
+`
+
+export const RecommandMovieTitle = styled.p`
+    text-align: start;
+    padding-top: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+    font-family: 'yg-jalnan', sans-serif !important;
+`
+
+export const RecommandMovieImg = styled.img`
+    width: 320px;
+    height: 180px;
+    margin-top: 16px;    
 `
 
 export const UserMovieTitle = styled.p`
@@ -54,7 +73,7 @@ export const UserMovieTitle = styled.p`
     padding-top: 8px;
     padding-left: 8px;
     padding-right: 8px;
-    font-family: 'JamsilBold', sans-serif !important;
+    font-family: 'yg-jalnan', sans-serif !important;
 `
 
 export const PopularMovieFavorite = styled.p`
@@ -83,7 +102,7 @@ export const HeaderProfileCard = styled.div`
     padding-top: 8px;
     padding-left: 12px;
     cursor: pointer;
-    font-family: 'Mango', sans-serif !important;
+    font-family: 'ONE-Mobile-POP', sans-serif !important;
 `
 
 export const DialogFix = styled.div`
@@ -175,10 +194,10 @@ export const DialogAuthLoginTitle = styled.p`
 
 export const HeaderItemTitle = styled.li`
     width: 70px;
-    margin-right: 40px;
+    margin-right: 20px;
     cursor: pointer;
     transition: transform 0.7s;
-    font-family: 'SB', sans-serif !important;
+    font-family: 'SBAggroB', sans-serif !important;
     
     &:hover {
         transform: scale(1.5);
@@ -189,6 +208,13 @@ export const HeaderItemTitle = styled.li`
 export const PopularMovieItem = styled.div`
     overflow-x: scroll;
     margin-left: 340px;
+`
+
+export const RecommandMovieItem = styled.div`
+    width: 520px;
+    height: 270px;
+    overflow-x: scroll;
+    margin: 0 auto;
 `
 
 export const UserMovieItem = styled.div`
@@ -212,6 +238,13 @@ export const PopularVideoDetailItem = styled.div`
 export const PopularMovieItemFix = styled.div`
     width: 4800px;
     height: 380px;
+    display: flex;
+    margin-top: 16px;
+`
+
+export const RecommandMovieItemFix = styled.div`
+    width: 1200px;
+    height: 240px;
     display: flex;
     margin-top: 16px;
 `
@@ -262,14 +295,20 @@ export const PopularMovieDetailOverlay = styled.div`
     box-sizing: border-box;
 `
 
-export const PopularMovieSection = styled.section`
-    width: 880px;
+export const RecommandMovieSection = styled.section`
+    width: 1320px;
     height: 60px;
-    margin-top: 120px;
+    margin-top: 60px;
+`
+
+export const PopularMovieSection = styled.section`
+    width: 1000px;
+    height: 60px;
+    margin-top: 300px;
 `
 
 export const UserMovieSection = styled.section`
-    width: 880px;
+    width: 1000px;
     height: 60px;
     margin-top: 220px;
 `
@@ -326,7 +365,7 @@ export const MovieContent = styled.p`
 `
 
 export const PopularActorSection = styled.section`
-    width: 880px;
+    width: 1000px;
     height: 60px;
     margin-top: 440px;
 `
@@ -355,6 +394,10 @@ export const PopularMovieDetailActorSection = styled.section`
 `
 
 export const PopularMovieArticle = styled.article`
+
+`
+
+export const RecommandMovieArticle = styled.article`
 
 `
 
@@ -394,11 +437,13 @@ export const ChooseTitle = styled.h1`
     margin-top: 60px;   
 `
 
-export const Input = styled.input`
-    width: 420px;
-    height: 40px;
+export const Input = styled.input<{ width: string, height: string, radius: string }>`
+    width: ${(props) => props.width};
+    height: ${(props) => props.height};
+    border-radius: ${(props) => props.radius};
     border: 0.3px solid grey;
     padding-left: 8px;
+    font-weight: bold;
 `
 
 export const InsertCard = styled.div`
@@ -442,13 +487,13 @@ export const Insert = styled.h1`
     padding-left: 12px;
     font-size: 18px;
     font-weight: bold;
-    font-family: 'JamsilBold', sans-serif !important;
+    font-family: 'GangwonEduPowerExtraBoldA', sans-serif !important;
 `
 
 export const InsertContent = styled.p`
     padding-top: 8px;
     padding-left: 12px;
-    font-family: 'Mango', sans-serif;
+    font-family: 'GongGothicMedium', sans-serif;
 `
 
 export const PopularActorArticle = styled.article`
@@ -534,6 +579,16 @@ export const UserMovieAside = styled.aside`
 `
 
 export const PopularMoviesCard = styled.div`
+    border-radius: 1.5rem;
+    margin-right: 20px;
+    transition: transform 0.3s;
+    
+    &:hover {
+        transform: scale(1.04);
+    }
+`
+
+export const RecommandMoviesCard = styled.div`
     border-radius: 1.5rem;
     margin-right: 20px;
     transition: transform 0.3s;

@@ -4,8 +4,6 @@ import { UserMovieItemsProps } from "./props/UserMovieItemsProps";
 
 export function UserMovieItems(props: UserMovieItemsProps) {
 
-    console.log(props);
-
     return (
         <UserMovieItem>
             <UserMovieItemFix>

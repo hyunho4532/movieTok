@@ -13,4 +13,6 @@ export type Discover = {
     setImpressionMovie: (impressionMovie: string) => void,
     movieIsRecom: string | null,
     setMovieIsRecom: (movieIsRecom: string) => void,
+    id: number,
+    title: string,
 }

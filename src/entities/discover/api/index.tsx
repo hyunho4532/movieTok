@@ -1,6 +1,7 @@
 import { AxiosInstance } from "../../../shared/axios";
+import { DiscoverListResponse } from "../response/DiscoverListResponse";
 
-export const getDiscoverListFromMovie = async (actionId: string, page: number): Promise<any[]> => {
+export const getDiscoverListFromMovie = async (actionId: string, page: number): Promise<DiscoverListResponse> => {
 
     const axiosInstance = AxiosInstance('discover');
 
@@ -11,10 +12,10 @@ export const getDiscoverListFromMovie = async (actionId: string, page: number): 
             throw new Error('Network response was not ok');
         }
 
-        return response.data;
+        return response.data as DiscoverListResponse;
         
     } catch (err) {
         console.error('Fetch error:', err);
-        return [];
+        throw err;
     }
 }
